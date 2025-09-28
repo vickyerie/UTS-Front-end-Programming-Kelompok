@@ -171,3 +171,37 @@ let destinations = [
     stories: "Nama Karimunjawa berasal dari kisah Sunan Muria yang melihat pulau ini dari jauh."
   }
 ];
+
+// ====== State ======
+let wishlist = [];
+let visited = [];
+
+// ====== Render Cards ======
+function renderDestinations(list) {
+  const $grid = $("#destinationsGrid");
+  $grid.empty();
+
+  if (list.length === 0) {
+    $grid.html("<p>Tidak ada destinasi ditemukan.</p>");
+    return;
+  }
+
+  $.each(list, function (_, d) {
+    const card = `
+      <div class="card">
+        <img src="${d.img}" alt="${d.name}">
+        <h3>${d.name}</h3>
+        <p class="location">${d.location}</p>
+        <p class="desc">${d.desc}</p>
+        <div class="actions">
+          <button class="btn detail-btn" data-id="${d.id}">Detail</button>
+          <button class="btn wishlist-btn" data-id="${d.id}">Wishlist</button>
+          <button class="btn visited-btn" data-id="${d.id}">Visited</button>
+          <button class="btn edit-btn" data-id="${d.id}">Edit</button>
+          <button class="btn delete-btn" data-id="${d.id}">Hapus</button>
+        </div>
+      </div>
+    `;
+    $grid.append(card);
+  });
+}
