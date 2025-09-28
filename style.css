@@ -276,3 +276,230 @@ body {
   animation: mapEpicCinematic 22s ease-in-out infinite;
   transform-origin: center;
 }
+
+/* Destinations Section */
+.destinations-section {
+    padding: 80px 0;
+    min-height: 80vh;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.section-header h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid #404040;
+    color: #cccccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active,
+.toggle-btn:hover {
+    background: #d5001c;
+    border-color: #d5001c;
+    color: #ffffff;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.destination-card {
+    background: #1a1a1a;
+    border: 1px solid #2d2d2d;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    animation: fadeIn 0.6s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-color: #404040;
+}
+
+.card {
+        background: #1a1a1a;
+        border: 1px solid #2d2d2d;
+        border-radius: 12px;
+        padding: 16px;
+        margin: 12px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 12px;
+      }
+      .card h3 {
+        margin: 8px 0;
+        font-size: 1.3rem;
+        color: #fff;
+      }
+      .card .location {
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-bottom: 8px;
+      }
+      .card .desc {
+        font-size: 0.95rem;
+        color: #ccc;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn {
+        background: #d5001c;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.2s ease;
+      }
+      .btn:hover {
+        background: #b20017;
+      }
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-location {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card .btn {
+  padding: 6px 14px;
+  border: 1px solid #e50914;
+  border-radius: 4px;
+  background: transparent;
+  color: #e50914;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card .btn:hover {
+  background: #e50914;
+  color: white;
+}
+
+.action-btn {
+    background: transparent;
+    border: 1px solid #404040;
+    color: #cccccc;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    border-color: #d5001c;
+    color: #d5001c;
+}
+
+.action-btn.active {
+    background: #d5001c;
+    border-color: #d5001c;
+    color: #ffffff;
+}
+
+.card-description {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #2d2d2d;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border: 1px solid #404040;
+}
+
+.tag.region {
+    background: #d5001c;
+    border-color: #d5001c;
+}
