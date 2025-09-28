@@ -205,3 +205,137 @@ function renderDestinations(list) {
     $grid.append(card);
   });
 }
+
+// ====== Filters & Search ======
+function applyFilters() {
+  const keyword = $("#searchInput").val().toLowerCase();
+  const region = $("#regionFilter").val();
+  const type = $("#typeFilter").val();
+
+  const filtered = destinations.filter(d => {
+    const matchKeyword = d.name.toLowerCase().includes(keyword) || d.location.toLowerCase().includes(keyword);
+    const matchRegion = !region || d.region === region;
+    const matchType = !type || d.type === type;
+    return matchKeyword && matchRegion && matchType;
+  });
+
+  renderDestinations(filtered);
+}
+
+function resetFilters() {
+  $("#searchInput").val("");
+  $("#regionFilter").val("");
+  $("#typeFilter").val("");
+  renderDestinations(destinations);
+}
+
+// ====== View Toggle ======
+function filterDestinations(view) {
+  if (view === "all") {
+    renderDestinations(destinations);
+  } else if (view === "wishlist") {
+    const filtered = destinations.filter(d => wishlist.includes(d.id));
+    renderDestinations(filtered);
+  } else if (view === "visited") {
+    const filtered = destinations.filter(d => visited.includes(d.id));
+    renderDestinations(filtered);
+  }
+
+  $(".toggle-btn").removeClass("active");
+  $(`.toggle-btn[data-view="${view}"]`).addClass("active");
+}
+
+// ====== Modal ======
+function showModal(dest) {
+  const activities = dest.activities ? dest.activities.map(a => `<li>${a}</li>`).join("") : "<li>-</li>";
+  const foods = dest.foods ? dest.foods.map(f => `<li>${f}</li>`).join("") : "<li>-</li>";
+  const stories = dest.stories || "";
+
+  $("#modalBody").html(`
+    <img src="${dest.img}" alt="${dest.name}" class="modal-hero">
+    <div class="modal-info">
+      <h2 class="modal-title">${dest.name}</h2>
+      <p class="modal-location">${dest.location}</p>
+      <div class="modal-description">${dest.desc}</div>
+      <div class="modal-history">
+        <h3>Sejarah</h3>
+        <p>${dest.history}</p>
+      </div>
+      <div class="modal-activities">
+        <h3>Aktivitas</h3>
+        <ul>${activities}</ul>
+      </div>
+      <div class="modal-foods">
+        <h3>Makanan Khas</h3>
+        <ul>${foods}</ul>
+      </div>
+      <div class="modal-stories">
+        <h3>Cerita & Budaya</h3>
+        <p>${stories}</p>
+      </div>
+    </div>
+  `);
+  $("#destinationModal").addClass("active");
+}
+
+function scrollToDestinations() {
+  const $dest = $("#destinations");
+  if ($dest.length) {
+    if (typeof filterDestinations === "function") {
+      filterDestinations("all");
+    }
+    $("html, body").animate({ scrollTop: $dest.offset().top }, 600);
+    $dest.addClass("pulse-highlight");
+    setTimeout(() => $dest.removeClass("pulse-highlight"), 1200);
+  }
+}
+
+function scrollToAbout() {
+  const $about = $("#about");
+  if ($about.length) {
+    $("html, body").animate({ scrollTop: $about.offset().top }, 600);
+    $about.addClass("pulse-highlight");
+    setTimeout(() => $about.removeClass("pulse-highlight"), 1200);
+  }
+}
+
+function handleScrollAnimations() {
+  const fadeEls = document.querySelectorAll(".fade-in");
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScrollAnimations);
+window.addEventListener("load", handleScrollAnimations);
+
+function closeModal() {
+  $("#destinationModal").removeClass("active");
+}
+
+function openAddModal() {
+  $("#addDestinationModal").addClass("active");
+}
+
+function closeAddModal() {
+  $("#addDestinationModal").removeClass("active");
+}
+
+function openEditModal(dest) {
+  $("#editDestId").val(dest.id);
+  $("#editDestName").val(dest.name);
+  $("#editDestLocation").val(dest.location);
+  $("#editDestRegion").val(dest.region);
+  $("#editDestType").val(dest.type);
+  $("#editDestDescription").val(dest.desc);
+  $("#editDestHistory").val(dest.history);
+  $("#editDestImageUrl").val(dest.img.replace("assets/", ""));
+  $("#editDestinationModal").addClass("active");
+}
+
+function closeEditModal() {
+  $("#editDestinationModal").removeClass("active");
+}
