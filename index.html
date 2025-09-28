@@ -51,7 +51,7 @@
       <span class="intro-tagline">Top Destinations and Heritage</span>
       <div class="intro-divider"></div>
       <p>
-        Indonesia, the world’s largest archipelago with more than 17,000 islands, 
+        Indonesia, the world's largest archipelago with more than 17,000 islands, 
         is home to breathtaking landscapes, diverse cultures, and rich history. 
         From Sabang to Merauke, every region holds unique treasures that form 
         the essence of the Nusantara heritage.
@@ -61,6 +61,7 @@
       </div>
     </div>
   </section>
+
   <!-- Search & Filter Section -->
   <section class="search-section">
     <div class="container">
@@ -108,24 +109,108 @@
           <button class="toggle-btn" data-view="visited" onclick="filterDestinations('visited')">Visited</button>
         </div>
       </div>
-      <div class="destinations-grid" id="destinationsGrid"></div>
+      <div class="destinations-showcase" id="destinationsGrid"></div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about-section fade-in">
     <div class="container">
-      <h2>About NUSANTARA</h2>
-      <p>
-        NUSANTARA dibuat untuk memperkenalkan keindahan alam, budaya, dan
-        warisan Indonesia.
-      </p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/login" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/login" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/login" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      <div class="about-header">
+        <h2>About NUSANTARA</h2>
+        <div class="about-divider"></div>
+        <p class="about-subtitle">
+          NUSANTARA is designed to showcase Indonesia’s 
+          natural beauty, rich culture, and heritage to the world.
+        </p>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <div class="stat-number">17,000+</div>
+          <div class="stat-label">Islands</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Ethnic Groups</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <div class="stat-number">700+</div>
+          <div class="stat-label">Local Languages</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <div class="stat-number">9</div>
+          <div class="stat-label">UNESCO Sites</div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Explore Destinations</h3>
+          <p>Discover hidden gems across the archipelago from Sabang to Merauke</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Rich History</h3>
+          <p>Learn about the cultural heritage and stories behind each location</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3>Visual Journey</h3>
+          <p>Experience breathtaking imagery and immersive galleries</p>
+        </div>
+      </div>
+
+      <!-- Quote Section -->
+      <div class="quote-section">
+        <i class="fas fa-quote-left quote-icon"></i>
+        <blockquote>
+          "Indonesia adalah negeri yang kaya akan budaya, alam, dan sejarah. 
+          Setiap pulau memiliki ceritanya sendiri yang menunggu untuk ditemukan."
+        </blockquote>
+      </div>
+
+      <!-- Social Links -->
+      <div class="about-footer">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/login" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/login" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/login" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -274,6 +359,17 @@
   <button class="floating-add-btn" onclick="openAddModal()" title="Add New Destination">
     <i class="fas fa-plus"></i>
   </button>
+
+  <!-- Lightbox for Gallery -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

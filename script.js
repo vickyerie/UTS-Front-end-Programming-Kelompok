@@ -1,3 +1,4 @@
+// ====== Data Destinasi ======
 let destinations = [
   {
     id: "bali",
@@ -15,7 +16,12 @@ let destinations = [
       "Menjelajahi Tegallalang Rice Terrace"
     ],
     foods: ["Ayam Betutu", "Babi Guling", "Lawar"],
-    stories: "Bali disebut Pulau Dewata karena keindahan alam dan spiritualitas Hindu. Tradisi adat Bali masih terjaga dalam kehidupan sehari-hari."
+    stories: "Bali disebut Pulau Dewata karena keindahan alam dan spiritualitas Hindu. Tradisi adat Bali masih terjaga dalam kehidupan sehari-hari.",
+    gallery: [
+      { img: "assets/bali-pura.jpg", caption: "Pura Besakih" },
+      { img: "assets/ayam-bali.jpg", caption: "Ayam Betutu khas Bali" },
+      { img: "assets/bali-dance.jpg", caption: "Tari Kecak di Uluwatu" }
+    ]
   },
   {
     id: "rajaampat",
@@ -32,7 +38,12 @@ let destinations = [
       "Birdwatching burung Cendrawasih"
     ],
     foods: ["Papeda", "Ikan kuah kuning"],
-    stories: "Raja Ampat diyakini berasal dari legenda empat raja yang lahir dari telur naga."
+    stories: "Raja Ampat diyakini berasal dari legenda empat raja yang lahir dari telur naga.",
+    gallery: [
+      { img: "assets/rajaampat-diving.jpg", caption: "Diving di perairan Raja Ampat" },
+      { img: "assets/papeda.jpg", caption: "Papeda" },
+      { img: "assets/rajaampat-underwater.jpg", caption: "Keindahan laut Raja Ampat" }
+    ]
   },
   {
     id: "komodo",
@@ -49,7 +60,12 @@ let destinations = [
       "Menyelam di perairan sekitar Pulau Komodo"
     ],
     foods: ["Se'i sapi", "Jagung bose"],
-    stories: "Masyarakat setempat percaya Komodo adalah saudara mereka dalam mitos asal-usul."
+    stories: "Masyarakat setempat percaya Komodo adalah saudara mereka dalam mitos asal-usul.",
+    gallery: [
+      { img: "assets/komodo-dragon.jpg", caption: "Komodo di habitat aslinya" },
+      { img: "assets/komodo-pink.jpg", caption: "Pantai Pink yang eksotis" },
+      { img: "assets/komodo-island.jpg", caption: "Pemandangan Pulau Komodo" }
+    ]
   },
   {
     id: "toba",
@@ -66,7 +82,12 @@ let destinations = [
       "Berendam di air panas Pangururan"
     ],
     foods: ["Arsik ikan mas", "Naniura"],
-    stories: "Legenda Danau Toba bercerita tentang asal mula terbentuknya danau dari kutukan seorang ayah kepada anaknya."
+    stories: "Legenda Danau Toba bercerita tentang asal mula terbentuknya danau dari kutukan seorang ayah kepada anaknya.",
+    gallery: [
+      { img: "assets/toba-samosir.jpg", caption: "Pulau Samosir dari ketinggian" },
+      { img: "assets/toba-house.jpg", caption: "Rumah adat Batak" },
+      { img: "assets/toba-sigale.jpg", caption: "Pertunjukan Sigale-gale" }
+    ]
   },
   {
     id: "bunaken",
@@ -82,8 +103,13 @@ let destinations = [
       "Snorkeling di Siladen",
       "Menikmati sunset di Manado Tua"
     ],
-    foods: ["Tinutuan (bubur Manado)", "Cakalang fufu"],
-    stories: "Bunaken menjadi simbol penting konservasi laut di Indonesia."
+    foods: ["Tinutuan (Bubur Manado)", "Cakalang fufu"],
+    stories: "Bunaken menjadi simbol penting konservasi laut di Indonesia.",
+    gallery: [
+      { img: "assets/divingspot-lekuan.jpg", caption: "Diving spot Lekuan" },
+      { img: "assets/bubur-manado.jpg", caption: "Tinutuan (Bubur Manado)" },
+      { img: "assets/tari-kabasaran.jpg", caption: "Tari Kabasaran" }
+    ]
   },
   {
     id: "derawan",
@@ -100,7 +126,12 @@ let destinations = [
       "Menikmati pantai pasir putih"
     ],
     foods: ["Kepiting soka", "Ikan bakar Derawan"],
-    stories: "Pulau Derawan masih dijaga oleh masyarakat adat yang hidup selaras dengan laut."
+    stories: "Pulau Derawan masih dijaga oleh masyarakat adat yang hidup selaras dengan laut.",
+    gallery: [
+      { img: "assets/danau-kakaban.jpg", caption: "Danau Kakaban" },
+      { img: "assets/kepiting-soka.jpg", caption: "Kepiting Soka" },
+      { img: "assets/tari-igal.jpg", caption: "Tari Dalling dan Igal" }
+    ]
   },
   {
     id: "wakatobi",
@@ -117,7 +148,12 @@ let destinations = [
       "Menjelajahi kehidupan masyarakat Bajo"
     ],
     foods: ["Kasuami", "Parende ikan"],
-    stories: "Wakatobi disebut surga bawah laut karena kekayaan biota lautnya yang sangat melimpah."
+    stories: "Wakatobi disebut surga bawah laut karena kekayaan biota lautnya yang sangat melimpah.",
+    gallery: [
+      { img: "assets/diving-tomia.jpg", caption: "Diving di Tomia" },
+      { img: "assets/kasuami.jpg", caption: "Kasuami" },
+      { img: "assets/upacara-wakatobi.jpg", caption: "Acara adat (Bidadari Mandi)" }
+    ]
   },
   {
     id: "toraja",
@@ -134,7 +170,12 @@ let destinations = [
       "Trekking di Londa dan Kete Kesu"
     ],
     foods: ["Pa'piong", "Deppa Tori"],
-    stories: "Toraja dipercaya sebagai keturunan langit, terlihat dari bentuk rumah adat Tongkonan."
+    stories: "Toraja dipercaya sebagai keturunan langit, terlihat dari bentuk rumah adat Tongkonan.",
+    gallery: [
+      { img: "assets/rumah-adat-tongkonan.jpg", caption: "Rumah adat Tongkonan" },
+      { img: "assets/deppa-tori.jpg", caption: "Makanan khas (Deppa Tori)" },
+      { img: "assets/ritual-manene.jpg", caption: "Ritual Ma'nene" }
+    ]
   },
   {
     id: "banda",
@@ -151,7 +192,12 @@ let destinations = [
       "Menjelajahi perkebunan pala"
     ],
     foods: ["Ikan asar", "Nasi kuning Maluku"],
-    stories: "Banda Neira pernah jadi pusat perebutan rempah antara bangsa Eropa."
+    stories: "Banda Neira pernah jadi pusat perebutan rempah antara bangsa Eropa.",
+    gallery: [
+      { img: "assets/benteng-belgica.jpg", caption: "Benteng Belgica" },
+      { img: "assets/rumah-budaya-banda-neira.jpg", caption: "Rumah Budaya Banda Neira" },
+      { img: "assets/pala-banda-neira.jpg", caption: "Perkebunan Pala" }
+    ]
   },
   {
     id: "karimunjawa",
@@ -168,7 +214,12 @@ let destinations = [
       "Menikmati sunset di Bukit Love"
     ],
     foods: ["Ikan bakar bumbu khas", "Lontong krubyuk"],
-    stories: "Nama Karimunjawa berasal dari kisah Sunan Muria yang melihat pulau ini dari jauh."
+    stories: "Nama Karimunjawa berasal dari kisah Sunan Muria yang melihat pulau ini dari jauh.",
+    gallery: [
+      { img: "assets/snorkeling-tanjung-gelam.jpg", caption: "Snorkeling Tanjung Gelam" },
+      { img: "assets/pindang-serani.webp", caption: "Pindang Serani" },
+      { img: "assets/pesta-lomban.png", caption: "Tradisi Pesta Lomban" }
+    ]
   }
 ];
 
@@ -176,33 +227,74 @@ let destinations = [
 let wishlist = [];
 let visited = [];
 
-// ====== Render Cards ======
+// ====== Render Destinations - New Cinematic Layout ======
 function renderDestinations(list) {
   const $grid = $("#destinationsGrid");
   $grid.empty();
 
   if (list.length === 0) {
-    $grid.html("<p>Tidak ada destinasi ditemukan.</p>");
+    $grid.html(`
+      <div class="empty-state">
+        <i class="fas fa-map-marked-alt"></i>
+        <h4>No destinations found</h4>
+        <p>Try adjusting your search or filters</p>
+      </div>
+    `);
     return;
   }
 
   $.each(list, function (_, d) {
-    const card = `
-      <div class="card">
-        <img src="${d.img}" alt="${d.name}">
-        <h3>${d.name}</h3>
-        <p class="location">${d.location}</p>
-        <p class="desc">${d.desc}</p>
-        <div class="actions">
-          <button class="btn detail-btn" data-id="${d.id}">Detail</button>
-          <button class="btn wishlist-btn" data-id="${d.id}">Wishlist</button>
-          <button class="btn visited-btn" data-id="${d.id}">Visited</button>
-          <button class="btn edit-btn" data-id="${d.id}">Edit</button>
-          <button class="btn delete-btn" data-id="${d.id}">Hapus</button>
+    const isWishlisted = wishlist.includes(d.id);
+    const isVisited = visited.includes(d.id);
+    
+    const destinationItem = `
+      <div class="destination-item" data-id="${d.id}">
+        <div class="destination-bg" style="background-image: url('${d.img}')"></div>
+        <div class="destination-overlay"></div>
+        <div class="destination-content">
+          <div class="destination-meta">
+            <span class="destination-type">${d.type}</span>
+            <span class="destination-region">
+              <i class="fas fa-map-marker-alt"></i>
+              ${d.region}
+            </span>
+          </div>
+          <h2 class="destination-title">${d.name}</h2>
+          <p class="destination-location">${d.location}</p>
+          <p class="destination-description">${d.desc}</p>
+          <div class="destination-actions">
+            <button class="action-btn primary detail-btn" data-id="${d.id}">
+              <i class="fas fa-eye"></i>
+              Explore
+            </button>
+            <button class="action-btn wishlist-btn ${isWishlisted ? 'active' : ''}" data-id="${d.id}">
+              <i class="fas fa-heart"></i>
+              ${isWishlisted ? 'Wishlisted' : 'Wishlist'}
+            </button>
+            <button class="action-btn visited-btn ${isVisited ? 'active' : ''}" data-id="${d.id}">
+              <i class="fas fa-check"></i>
+              ${isVisited ? 'Visited' : 'Mark Visited'}
+            </button>
+            <button class="action-btn edit-btn" data-id="${d.id}">
+              <i class="fas fa-edit"></i>
+              Edit
+            </button>
+            <button class="action-btn delete-btn" data-id="${d.id}">
+              <i class="fas fa-trash"></i>
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     `;
-    $grid.append(card);
+    $grid.append(destinationItem);
+  });
+
+  $(".destination-item").each(function(index) {
+    $(this).css({
+      'animation-delay': (index * 0.1) + 's',
+      'animation': 'fadeIn 0.6s ease forwards'
+    });
   });
 }
 
@@ -245,18 +337,42 @@ function filterDestinations(view) {
   $(`.toggle-btn[data-view="${view}"]`).addClass("active");
 }
 
-// ====== Modal ======
+// ====== Modal Functions ======
 function showModal(dest) {
   const activities = dest.activities ? dest.activities.map(a => `<li>${a}</li>`).join("") : "<li>-</li>";
   const foods = dest.foods ? dest.foods.map(f => `<li>${f}</li>`).join("") : "<li>-</li>";
   const stories = dest.stories || "";
+  
+  // Generate gallery HTML if available
+  let galleryHTML = "";
+  if (dest.gallery && dest.gallery.length > 0) {
+    galleryHTML = `
+      <div class="modal-gallery">
+        <h3>Galeri Foto</h3>
+        <div class="gallery-grid">
+          ${dest.gallery.map(item => `
+            <div class="gallery-item">
+              <img src="${item.img}" alt="${item.caption}" onerror="this.src='assets/placeholder.jpg'">
+              <p class="gallery-caption">${item.caption}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
 
   $("#modalBody").html(`
     <img src="${dest.img}" alt="${dest.name}" class="modal-hero">
     <div class="modal-info">
       <h2 class="modal-title">${dest.name}</h2>
-      <p class="modal-location">${dest.location}</p>
+      <p class="modal-location">
+        <i class="fas fa-map-marker-alt"></i>
+        ${dest.location}
+      </p>
       <div class="modal-description">${dest.desc}</div>
+      
+      ${galleryHTML}
+      
       <div class="modal-history">
         <h3>Sejarah</h3>
         <p>${dest.history}</p>
@@ -278,6 +394,45 @@ function showModal(dest) {
   $("#destinationModal").addClass("active");
 }
 
+function closeModal() {
+  $("#destinationModal").removeClass("active");
+}
+
+function openAddModal() {
+  $("#addDestinationModal").addClass("active");
+}
+
+function closeAddModal() {
+  $("#addDestinationModal").removeClass("active");
+}
+
+function openEditModal(dest) {
+  $("#editDestId").val(dest.id);
+  $("#editDestName").val(dest.name);
+  $("#editDestLocation").val(dest.location);
+  $("#editDestRegion").val(dest.region);
+  $("#editDestType").val(dest.type);
+  $("#editDestDescription").val(dest.desc);
+  $("#editDestHistory").val(dest.history);
+  $("#editDestImageUrl").val(dest.img.replace("assets/", ""));
+  $("#editDestinationModal").addClass("active");
+}
+
+function closeEditModal() {
+  $("#editDestinationModal").removeClass("active");
+}
+
+function openLightbox(imgSrc, caption) {
+  $("#lightboxImg").attr("src", imgSrc);
+  $("#lightboxCaption").text(caption);
+  $("#lightbox").addClass("active");
+}
+
+function closeLightbox() {
+  $("#lightbox").removeClass("active");
+}
+
+// ====== Utility Functions ======
 function scrollToDestinations() {
   const $dest = $("#destinations");
   if ($dest.length) {
@@ -309,38 +464,7 @@ function handleScrollAnimations() {
   });
 }
 
-window.addEventListener("scroll", handleScrollAnimations);
-window.addEventListener("load", handleScrollAnimations);
-
-function closeModal() {
-  $("#destinationModal").removeClass("active");
-}
-
-function openAddModal() {
-  $("#addDestinationModal").addClass("active");
-}
-
-function closeAddModal() {
-  $("#addDestinationModal").removeClass("active");
-}
-
-function openEditModal(dest) {
-  $("#editDestId").val(dest.id);
-  $("#editDestName").val(dest.name);
-  $("#editDestLocation").val(dest.location);
-  $("#editDestRegion").val(dest.region);
-  $("#editDestType").val(dest.type);
-  $("#editDestDescription").val(dest.desc);
-  $("#editDestHistory").val(dest.history);
-  $("#editDestImageUrl").val(dest.img.replace("assets/", ""));
-  $("#editDestinationModal").addClass("active");
-}
-
-function closeEditModal() {
-  $("#editDestinationModal").removeClass("active");
-}
-
-// ====== Init ======
+// ====== Event Handlers ======
 $(document).ready(function () {
   renderDestinations(destinations);
 
@@ -348,50 +472,87 @@ $(document).ready(function () {
   $("#regionFilter").on("change", applyFilters);
   $("#typeFilter").on("change", applyFilters);
 
-  $(document).on("click", ".detail-btn", function () {
+  $(document).on("click", ".detail-btn", function (e) {
+    e.stopPropagation();
     const id = $(this).data("id");
     const dest = destinations.find(d => d.id === id);
     if (dest) showModal(dest);
   });
 
-  $(document).on("click", ".wishlist-btn", function () {
+  $(document).on("click", ".wishlist-btn", function (e) {
+    e.stopPropagation();
     const id = $(this).data("id");
     if (!wishlist.includes(id)) {
       wishlist.push(id);
-      $(this).text("Wishlisted");
+      $(this).addClass("active").html('<i class="fas fa-heart"></i> Wishlisted');
     } else {
       wishlist = wishlist.filter(w => w !== id);
-      $(this).text("Wishlist");
+      $(this).removeClass("active").html('<i class="fas fa-heart"></i> Wishlist');
     }
   });
 
-  $(document).on("click", ".visited-btn", function () {
+  $(document).on("click", ".visited-btn", function (e) {
+    e.stopPropagation();
     const id = $(this).data("id");
     if (!visited.includes(id)) {
       visited.push(id);
-      $(this).text("Visited ✔");
+      $(this).addClass("active").html('<i class="fas fa-check"></i> Visited');
     } else {
       visited = visited.filter(v => v !== id);
-      $(this).text("Visited");
+      $(this).removeClass("active").html('<i class="fas fa-check"></i> Mark Visited');
     }
   });
 
-  $(document).on("click", ".delete-btn", function () {
+  $(document).on("click", ".delete-btn", function (e) {
+    e.stopPropagation();
     const id = $(this).data("id");
-    destinations = destinations.filter(d => d.id !== id);
-    applyFilters();
+    if (confirm("Are you sure you want to delete this destination?")) {
+      destinations = destinations.filter(d => d.id !== id);
+      applyFilters();
+    }
   });
 
-  $(document).on("click", ".edit-btn", function () {
+  $(document).on("click", ".edit-btn", function (e) {
+    e.stopPropagation();
     const id = $(this).data("id");
     const dest = destinations.find(d => d.id === id);
     if (dest) openEditModal(dest);
+  });
+
+  $(document).on("click", ".destination-item", function (e) {
+    if (!$(e.target).closest("button").length) {
+      const id = $(this).data("id");
+      const dest = destinations.find(d => d.id === id);
+      if (dest) showModal(dest);
+    }
   });
 
   $(document).on("click", ".modal-close", function () {
     closeModal();
     closeAddModal();
     closeEditModal();
+  });
+
+  $(document).on("click", ".modal-overlay", function (e) {
+    if ($(e.target).hasClass("modal-overlay")) {
+      closeModal();
+      closeAddModal();
+      closeEditModal();
+    }
+  });
+
+  // Gallery image click event
+  $(document).on("click", ".gallery-item img", function() {
+    const imgSrc = $(this).attr("src");
+    const caption = $(this).closest(".gallery-item").find(".gallery-caption").text();
+    openLightbox(imgSrc, caption);
+  });
+
+  // Close lightbox on background click
+  $("#lightbox").on("click", function(e) {
+    if ($(e.target).is("#lightbox")) {
+      closeLightbox();
+    }
   });
 
   $("#addDestinationForm").on("submit", function (e) {
@@ -452,9 +613,6 @@ $(document).ready(function () {
     } else if (target === "#destinations") {
       $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
       filterDestinations("all");
-    } else if (target === "#wishlist") {
-      $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
-      filterDestinations("wishlist");
     } else if (target === "#about") {
       scrollToAbout();
     }
@@ -478,6 +636,17 @@ $(document).ready(function () {
       $(".nav-link[href='#destinations']").addClass("active");
     } else if (scrollPos >= homeTop) {
       $(".nav-link[href='#home']").addClass("active");
+    }
+  });
+
+  window.addEventListener("scroll", handleScrollAnimations);
+  window.addEventListener("load", handleScrollAnimations);
+
+  $(document).on("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeModal();
+      closeAddModal();
+      closeEditModal();
     }
   });
 });
