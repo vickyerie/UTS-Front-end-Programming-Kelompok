@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUSANTARA - Explore Indonesia's Heritage</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <h1>NUSANTARA</h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#destinations" class="nav-link">Destinations</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Discover Indonesia's Hidden Gems</h2>
+        <p>
+          Explore the rich heritage and breathtaking beauty of the Nusantara archipelago
+        </p>
+        <button class="cta-button" onclick="scrollToDestinations()">
+          Explore Now
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="intro-section" id="intro">
+    <div class="container">
+      <span class="intro-tagline">Top Destinations and Heritage</span>
+      <div class="intro-divider"></div>
+      <p>
+        Indonesia, the world’s largest archipelago with more than 17,000 islands, 
+        is home to breathtaking landscapes, diverse cultures, and rich history. 
+        From Sabang to Merauke, every region holds unique treasures that form 
+        the essence of the Nusantara heritage.
+      </p>
+      <div class="intro-map">
+        <img src="assets/indonesia-map.png" alt="Indonesia Map">
+      </div>
+    </div>
+  </section>
