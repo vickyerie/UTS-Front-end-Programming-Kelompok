@@ -339,3 +339,145 @@ function openEditModal(dest) {
 function closeEditModal() {
   $("#editDestinationModal").removeClass("active");
 }
+
+// ====== Init ======
+$(document).ready(function () {
+  renderDestinations(destinations);
+
+  $("#searchInput").on("input", applyFilters);
+  $("#regionFilter").on("change", applyFilters);
+  $("#typeFilter").on("change", applyFilters);
+
+  $(document).on("click", ".detail-btn", function () {
+    const id = $(this).data("id");
+    const dest = destinations.find(d => d.id === id);
+    if (dest) showModal(dest);
+  });
+
+  $(document).on("click", ".wishlist-btn", function () {
+    const id = $(this).data("id");
+    if (!wishlist.includes(id)) {
+      wishlist.push(id);
+      $(this).text("Wishlisted");
+    } else {
+      wishlist = wishlist.filter(w => w !== id);
+      $(this).text("Wishlist");
+    }
+  });
+
+  $(document).on("click", ".visited-btn", function () {
+    const id = $(this).data("id");
+    if (!visited.includes(id)) {
+      visited.push(id);
+      $(this).text("Visited ✔");
+    } else {
+      visited = visited.filter(v => v !== id);
+      $(this).text("Visited");
+    }
+  });
+
+  $(document).on("click", ".delete-btn", function () {
+    const id = $(this).data("id");
+    destinations = destinations.filter(d => d.id !== id);
+    applyFilters();
+  });
+
+  $(document).on("click", ".edit-btn", function () {
+    const id = $(this).data("id");
+    const dest = destinations.find(d => d.id === id);
+    if (dest) openEditModal(dest);
+  });
+
+  $(document).on("click", ".modal-close", function () {
+    closeModal();
+    closeAddModal();
+    closeEditModal();
+  });
+
+  $("#addDestinationForm").on("submit", function (e) {
+    e.preventDefault();
+    const newDest = {
+      id: Date.now().toString(),
+      name: $("#destName").val(),
+      location: $("#destLocation").val(),
+      region: $("#destRegion").val(),
+      type: $("#destType").val(),
+      img: "assets/" + $("#destImageUrl").val(),
+      desc: $("#destDescription").val(),
+      history: $("#destHistory").val(),
+      activities: [],
+      foods: [],
+      stories: ""
+    };
+    destinations.push(newDest);
+    renderDestinations(destinations);
+    closeAddModal();
+    this.reset();
+  });
+
+  $("#editDestinationForm").on("submit", function (e) {
+    e.preventDefault();
+    const id = $("#editDestId").val();
+    const index = destinations.findIndex(d => d.id === id);
+    if (index !== -1) {
+      destinations[index] = {
+        ...destinations[index],
+        name: $("#editDestName").val(),
+        location: $("#editDestLocation").val(),
+        region: $("#editDestRegion").val(),
+        type: $("#editDestType").val(),
+        img: "assets/" + $("#editDestImageUrl").val(),
+        desc: $("#editDestDescription").val(),
+        history: $("#editDestHistory").val()
+      };
+      renderDestinations(destinations);
+      closeEditModal();
+    }
+  });
+
+  $(".hamburger").on("click", function () {
+    $(".nav-menu").toggleClass("active");
+    $(this).toggleClass("active");
+  });
+
+  $(".nav-link").on("click", function (e) {
+    e.preventDefault();
+    const target = $(this).attr("href");
+
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
+
+    if (target === "#home") {
+      $("html, body").animate({ scrollTop: $("#home").offset().top }, 500);
+    } else if (target === "#destinations") {
+      $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
+      filterDestinations("all");
+    } else if (target === "#wishlist") {
+      $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
+      filterDestinations("wishlist");
+    } else if (target === "#about") {
+      scrollToAbout();
+    }
+
+    $(".nav-menu").removeClass("active");
+    $(".hamburger").removeClass("active");
+  });
+
+  $(window).on("scroll", function () {
+    const scrollPos = $(document).scrollTop();
+
+    const homeTop = $("#home").offset().top - 100;
+    const destTop = $("#destinations").offset().top - 100;
+    const aboutTop = $("#about").offset().top - 100;
+
+    $(".nav-link").removeClass("active");
+
+    if (scrollPos >= aboutTop) {
+      $(".nav-link[href='#about']").addClass("active");
+    } else if (scrollPos >= destTop) {
+      $(".nav-link[href='#destinations']").addClass("active");
+    } else if (scrollPos >= homeTop) {
+      $(".nav-link[href='#home']").addClass("active");
+    }
+  });
+});
