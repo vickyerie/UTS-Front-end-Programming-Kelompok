@@ -1339,3 +1339,10 @@ body {
         margin: 1%;
     }
 }
+
+/* ===== Text Justify untuk History & Stories ===== */
+.modal-history p,
+.modal-stories p {
+  text-align: justify;
+  line-height: 1.7; /* biar lebih enak dibaca */
+}
