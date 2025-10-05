@@ -1,5 +1,5 @@
-// ====== Data Destinasi ======
-let destinations = [
+// Data Destination
+const destinations = [
   {
     id: "bali",
     name: "Bali",
@@ -60,7 +60,7 @@ let destinations = [
       "Menyelam di perairan sekitar Pulau Komodo"
     ],
     foods: ["Se'i sapi", "Jagung bose"],
-    stories: "Legenda lokal bercerita tentang Putri Naga yang melahirkan dua anak: seorang manusia dan seekor komodo, menandakan ikatan sakral manusia dengan reptil ini. Warga percaya komodo adalah “saudara tua” yang harus dihormati. Setiap ritual adat, mereka selalu menyertakan simbol naga sebagai perlindungan. Wisatawan sering kagum dengan kisah mistis ini yang bikin pengalaman makin berkesan. Sampai sekarang, legenda itu masih hidup di tengah masyarakat sekitar Komodo.",
+    stories: "Legenda lokal bercerita tentang Putri Naga yang melahirkan dua anak: seorang manusia dan seekor komodo, menandakan ikatan sakral manusia dengan reptil ini. Warga percaya komodo adalah 'saudara tua' yang harus dihormati. Setiap ritual adat, mereka selalu menyertakan simbol naga sebagai perlindungan. Wisatawan sering kagum dengan kisah mistis ini yang bikin pengalaman makin berkesan. Sampai sekarang, legenda itu masih hidup di tengah masyarakat sekitar Komodo.",
     gallery: [
       { img: "assets/komodo-dragon.jpg", caption: "Komodo di habitat aslinya" },
       { img: "assets/komodo-pink.jpg", caption: "Pantai Pink yang eksotis" },
@@ -104,7 +104,7 @@ let destinations = [
       "Menikmati sunset di Manado Tua"
     ],
     foods: ["Tinutuan (Bubur Manado)", "Cakalang fufu"],
-    stories: "Legenda setempat menyebut Bunaken berasal dari kata “Wunakeng” yang berarti tempat tinggal. Ada juga cerita rakyat tentang seorang putri laut yang menjaga karang Bunaken. Warga percaya laut adalah sumber kehidupan yang harus dihormati. Setiap upacara adat, masyarakat Minahasa selalu menyertakan doa untuk laut. Kisah-kisah ini masih diceritakan ke anak-anak sebagai pengingat untuk menjaga alam.",
+    stories: "Legenda setempat menyebut Bunaken berasal dari kata 'Wunakeng' yang berarti tempat tinggal. Ada juga cerita rakyat tentang seorang putri laut yang menjaga karang Bunaken. Warga percaya laut adalah sumber kehidupan yang harus dihormati. Setiap upacara adat, masyarakat Minahasa selalu menyertakan doa untuk laut. Kisah-kisah ini masih diceritakan ke anak-anak sebagai pengingat untuk menjaga alam.",
     gallery: [
       { img: "assets/divingspot-lekuan.jpg", caption: "Diving spot Lekuan" },
       { img: "assets/bubur-manado.jpg", caption: "Tinutuan (Bubur Manado)" },
@@ -185,14 +185,14 @@ let destinations = [
     type: "Cultural",
     img: "assets/banda.jpg",
     desc: "Pulau rempah bersejarah dengan benteng kolonial dan laut indah.",
-    history: "Banda Neira, bagian dari Kepulauan Banda di Maluku, dulu disebut “pulau rempah” karena jadi satu-satunya penghasil pala di dunia. Sejak abad ke-15, pedagang Arab, India, dan Cina sudah datang untuk membeli pala dan fuli. Ketika Portugis tiba di abad ke-16, mereka gagal menguasai Banda, hingga akhirnya Belanda mengambil alih dengan VOC. Periode kolonial penuh tragedi, termasuk pembantaian penduduk Banda pada 1621 oleh Jan Pieterszoon Coen demi monopoli pala. Pulau-pulau Banda kemudian diisi dengan pekerja budak dari berbagai daerah. Pada abad ke-19, Inggris sempat menguasai Banda dan menukar Pulau Run dengan Manhattan lewat Perjanjian Breda. Meski penuh konflik, Banda tetap jadi pusat perdagangan internasional. Setelah Indonesia merdeka, Banda Neira mulai dikenal bukan hanya karena rempah, tapi juga sejarah panjangnya. Kini, Banda Neira jadi destinasi wisata sejarah dan bahari, menyimpan peninggalan kolonial dan kisah perjuangan rakyatnya. Sejarah Banda adalah cerminan betapa rempah-rempah bisa mengubah jalannya dunia.",
+    history: "Banda Neira, bagian dari Kepulauan Banda di Maluku, dulu disebut 'pulau rempah' karena jadi satu-satunya penghasil pala di dunia. Sejak abad ke-15, pedagang Arab, India, dan Cina sudah datang untuk membeli pala dan fuli. Ketika Portugis tiba di abad ke-16, mereka gagal menguasai Banda, hingga akhirnya Belanda mengambil alih dengan VOC. Periode kolonial penuh tragedi, termasuk pembantaian penduduk Banda pada 1621 oleh Jan Pieterszoon Coen demi monopoli pala. Pulau-pulau Banda kemudian diisi dengan pekerja budak dari berbagai daerah. Pada abad ke-19, Inggris sempat menguasai Banda dan menukar Pulau Run dengan Manhattan lewat Perjanjian Breda. Meski penuh konflik, Banda tetap jadi pusat perdagangan internasional. Setelah Indonesia merdeka, Banda Neira mulai dikenal bukan hanya karena rempah, tapi juga sejarah panjangnya. Kini, Banda Neira jadi destinasi wisata sejarah dan bahari, menyimpan peninggalan kolonial dan kisah perjuangan rakyatnya. Sejarah Banda adalah cerminan betapa rempah-rempah bisa mengubah jalannya dunia.",
     activities: [
       "Mengunjungi Benteng Belgica",
       "Snorkeling di Laut Banda",
       "Menjelajahi perkebunan pala"
     ],
     foods: ["Ikan asar", "Nasi kuning Maluku"],
-    stories: "Cerita rakyat Banda menyebut pala adalah “emas” yang ditanam leluhur sebagai berkah. Banyak kisah mistis tentang pohon pala tua yang dianggap keramat dan dijaga roh penjaga pulau. Warga percaya aroma pala bisa menolak bala dan membawa rezeki. Tarian Cakalele masih dimainkan untuk mengenang perjuangan melawan penjajah. Legenda dan tradisi ini bikin Banda Neira punya jiwa yang tak bisa dipisahkan dari rempah.",
+    stories: "Cerita rakyat Banda menyebut pala adalah 'emas' yang ditanam leluhur sebagai berkah. Banyak kisah mistis tentang pohon pala tua yang dianggap keramat dan dijaga roh penjaga pulau. Warga percaya aroma pala bisa menolak bala dan membawa rezeki. Tarian Cakalele masih dimainkan untuk mengenang perjuangan melawan penjajah. Legenda dan tradisi ini bikin Banda Neira punya jiwa yang tak bisa dipisahkan dari rempah.",
     gallery: [
       { img: "assets/benteng-belgica.jpg", caption: "Benteng Belgica" },
       { img: "assets/rumah-budaya-banda-neira.jpg", caption: "Rumah Budaya Banda Neira" },
@@ -207,7 +207,7 @@ let destinations = [
     type: "Island",
     img: "assets/karimunjawa.jpg",
     desc: "Kepulauan dengan pantai tropis dan snorkeling menawan.",
-    history: "Karimunjawa awalnya hanya pulau kecil terpencil di Laut Jawa. Sunan Nyamplungan disebut sebagai tokoh yang menyebarkan Islam di wilayah ini. Nama Karimunjawa berasal dari “kremun-kremun” atau samar terlihat dari daratan. Pada masa kolonial, beberapa orang diasingkan ke pulau ini. Masyarakatnya hidup sebagai nelayan dengan tradisi bahari yang kental. Abad ke-20, pemerintah menetapkannya sebagai taman nasional laut. Tujuannya melindungi terumbu karang dan biota laut yang beragam. Sejak itu, pariwisata bahari perlahan berkembang di Karimunjawa. Kini pulau ini dikenal sebagai surga snorkeling dan diving. Keindahannya membuat Karimunjawa dijuluki Maldives-nya Indonesia.",
+    history: "Karimunjawa awalnya hanya pulau kecil terpencil di Laut Jawa. Sunan Nyamplungan disebut sebagai tokoh yang menyebarkan Islam di wilayah ini. Nama Karimunjawa berasal dari 'kremun-kremun' atau samar terlihat dari daratan. Pada masa kolonial, beberapa orang diasingkan ke pulau ini. Masyarakatnya hidup sebagai nelayan dengan tradisi bahari yang kental. Abad ke-20, pemerintah menetapkannya sebagai taman nasional laut. Tujuannya melindungi terumbu karang dan biota laut yang beragam. Sejak itu, pariwisata bahari perlahan berkembang di Karimunjawa. Kini pulau ini dikenal sebagai surga snorkeling dan diving. Keindahannya membuat Karimunjawa dijuluki Maldives-nya Indonesia.",
     activities: [
       "Island hopping ke pulau-pulau kecil",
       "Snorkeling di Tanjung Gelam",
@@ -222,66 +222,52 @@ let destinations = [
     ]
   },
   {
-  id: "belitung",
-  name: "Belitung",
-  location: "Kepulauan Bangka Belitung",
-  region: "Sumatera",
-  type: "Beach",
-  img:"assets/belitung.jpg",
-  desc: "Belitung terkenal dengan pantai berpasir putih dan bebatuan granit raksasa.",
-  history: "Belitung sejak lama dikenal sebagai pulau penghasil timah, bahkan sejak masa kolonial Belanda di abad ke-19. Sebelum itu, masyarakat Melayu Belitung sudah hidup dari laut, pertanian, dan perdagangan kecil. Pada era VOC, pulau ini mulai diperhatikan karena posisinya strategis di jalur pelayaran. Tahun 1851, perusahaan tambang timah Belanda resmi beroperasi dan membawa banyak pekerja dari Jawa dan Cina. Kehadiran tambang mengubah wajah Belitung jadi pusat industri timah penting di Asia Tenggara. Setelah kemerdekaan Indonesia, PT Timah mengambil alih tambang dan menjadi tulang punggung ekonomi daerah. Meski begitu, eksploitasi tambang juga meninggalkan kerusakan lingkungan. Baru setelah tahun 2000-an, pariwisata Belitung mulai berkembang pesat, apalagi setelah film Laskar Pelangi tahun 2008 yang bikin nama Belitung mendunia. Pulau ini kini dikenal dengan pantai berpasir putih dan batu granit raksasanya. Sejarah Belitung mencerminkan perjalanan dari pulau tambang ke destinasi wisata kelas dunia.",
-  foods: [
-    "Mie Belitung",
-    "Gangan Ikan",
-    "Kue Cucur",
-    "Lempah Kuning"
-  ],
-  activities: [
-    "Snorkeling di Pulau Lengkuas",
-    "Island hopping ke pulau-pulau kecil",
-    "Menjelajahi bebatuan granit raksasa",
-    "Mengunjungi replika SD Laskar Pelangi",
-    "Wisata kuliner khas Belitung"
-  ],
-  stories: [
-    "Legenda setempat menyebut Belitung berasal dari kata “Belitong,” sejenis siput laut yang banyak ditemukan di sana. Ada cerita rakyat tentang Batu Garuda, formasi batu granit yang dianggap jelmaan burung mistis. Warga juga punya mitos tentang danau Kaolin yang dipercaya menyimpan energi magis. Kisah Laskar Pelangi kini jadi cerita modern yang mengangkat harga diri orang Belitung. Tradisi dan legenda itu bikin pulau ini bukan sekadar indah, tapi juga penuh makna."
-  ],
-  gallery: [
-    { img: "assets/baripat-baregong.webp", caption:"Baripat Baregong"},
-    { img: "assets/lempah-kuning.webp", caption:"Lempah Kuning"},
-    { img: "assets/buang-jung.webp", caption:"Buang Jung"}
-  ]
+    id: "belitung",
+    name: "Belitung",
+    location: "Kepulauan Bangka Belitung",
+    region: "Sumatera",
+    type: "Beach",
+    img:"assets/belitung.jpg",
+    desc: "Belitung terkenal dengan pantai berpasir putih dan bebatuan granit raksasa.",
+    history: "Belitung sejak lama dikenal sebagai pulau penghasil timah, bahkan sejak masa kolonial Belanda di abad ke-19. Sebelum itu, masyarakat Melayu Belitung sudah hidup dari laut, pertanian, dan perdagangan kecil. Pada era VOC, pulau ini mulai diperhatikan karena posisinya strategis di jalur pelayaran. Tahun 1851, perusahaan tambang timah Belanda resmi beroperasi dan membawa banyak pekerja dari Jawa dan Cina. Kehadiran tambang mengubah wajah Belitung jadi pusat industri timah penting di Asia Tenggara. Setelah kemerdekaan Indonesia, PT Timah mengambil alih tambang dan menjadi tulang punggung ekonomi daerah. Meski begitu, eksploitasi tambang juga meninggalkan kerusakan lingkungan. Baru setelah tahun 2000-an, pariwisata Belitung mulai berkembang pesat, apalagi setelah film Laskar Pelangi tahun 2008 yang bikin nama Belitung mendunia. Pulau ini kini dikenal dengan pantai berpasir putih dan batu granit raksasnya. Sejarah Belitung mencerminkan perjalanan dari pulau tambang ke destinasi wisata kelas dunia.",
+    foods: ["Mie Belitung", "Gangan Ikan", "Kue Cucur", "Lempah Kuning"],
+    activities: [
+      "Snorkeling di Pulau Lengkuas",
+      "Island hopping ke pulau-pulau kecil",
+      "Menjelajahi bebatuan granit raksasa",
+      "Mengunjungi replika SD Laskar Pelangi",
+      "Wisata kuliner khas Belitung"
+    ],
+    stories: "Legenda setempat menyebut Belitung berasal dari kata 'Belitong,' sejenis siput laut yang banyak ditemukan di sana. Ada cerita rakyat tentang Batu Garuda, formasi batu granit yang dianggap jelmaan burung mistis. Warga juga punya mitos tentang danau Kaolin yang dipercaya menyimpan energi magis. Kisah Laskar Pelangi kini jadi cerita modern yang mengangkat harga diri orang Belitung. Tradisi dan legenda itu bikin pulau ini bukan sekadar indah, tapi juga penuh makna.",
+    gallery: [
+      { img: "assets/baripat-baregong.webp", caption:"Baripat Baregong"},
+      { img: "assets/lempah-kuning.webp", caption:"Lempah Kuning"},
+      { img: "assets/buang-jung.webp", caption:"Buang Jung"}
+    ]
   },
   {
-  id: "pulau-weh",
-  name: "Pulau Weh",
-  location: "Sabang, Aceh",
-  region: "Sumatera",
-  type: "Island",
-  img: "assets/pulau-weh.jpg",
-  desc: "Pulau Weh dikenal dengan spot diving indah dan kehidupan bawah laut yang kaya.",
-  history: "Pulau Weh adalah pulau vulkanik kecil di ujung barat Indonesia, terbentuk dari letusan gunung purba ribuan tahun lalu. Sejak dulu, pulau ini dihuni masyarakat Aceh yang hidup dari laut dan perdagangan. Karena lokasinya strategis di jalur Selat Malaka, Pulau Weh sering disinggahi pedagang dari India, Arab, dan Eropa. Saat era kolonial Belanda, Pulau Weh dijadikan lokasi pelabuhan batu bara untuk kapal uap internasional. Jepang kemudian menduduki pulau ini saat Perang Dunia II dan membangun banyak benteng pertahanan. Setelah kemerdekaan Indonesia, Pulau Weh tetap dianggap kawasan penting karena posisinya sebagai gerbang barat Nusantara. Tahun 1960-an, pemerintah menetapkan sebagian wilayah Pulau Weh sebagai cagar alam laut untuk melindungi ekosistemnya. Seiring waktu, Pulau Weh dikenal luas dengan keindahan bawah laut dan pantainya. Kini, pulau ini jadi destinasi wisata bahari dengan spot diving kelas dunia seperti Iboih dan Rubiah. Sejarah Pulau Weh adalah gabungan kisah alam, perdagangan, dan peran strategis di jalur internasional.",
-  foods: [
-    "Mie Aceh",
-    "Ikan Bakar Sabang",
-    "Kari Kambing",
-    "Kopi Ulee Kareng"
-  ],
-  activities: [
-    "Snorkeling di Iboih",
-    "Menyelam di Taman Laut Rubiah",
-    "Mengunjungi Tugu Nol Kilometer Indonesia",
-    "Menikmati sunset di Pantai Gapang",
-    "Jelajah kuliner khas Aceh"
-  ],
-  stories: [
-    "Masyarakat setempat percaya laut di sekitar Pulau Weh dijaga roh leluhur yang melindungi para nelayan. Ada legenda tentang seekor naga laut yang menjelma jadi bukit di pulau itu. Pulau Rubiah diyakini dinamai dari seorang perempuan saleh yang makamnya masih diziarahi hingga kini. Tugu Kilometer Nol sering dianggap sakral sebagai simbol awal Indonesia. Kisah-kisah ini bikin Pulau Weh punya daya tarik spiritual selain keindahan alamnya."
-  ],
-  gallery: [
-    { img: "assets/lhok-ie-meulee.jpeg", caption:"Lhok Ie Meulee"},
-    { img: "assets/sate-gurita.webp", caption:"Sate Gurita"},
-    { img: "assets/pantai-tapak-gajah.jpg", caption:"Pantai Tapak Gajah"}
-  ]
+    id: "pulau-weh",
+    name: "Pulau Weh",
+    location: "Sabang, Aceh",
+    region: "Sumatera",
+    type: "Island",
+    img: "assets/pulau-weh.jpg",
+    desc: "Pulau Weh dikenal dengan spot diving indah dan kehidupan bawah laut yang kaya.",
+    history: "Pulau Weh adalah pulau vulkanik kecil di ujung barat Indonesia, terbentuk dari letusan gunung purba ribuan tahun lalu. Sejak dulu, pulau ini dihuni masyarakat Aceh yang hidup dari laut dan perdagangan. Karena lokasinya strategis di jalur Selat Malaka, Pulau Weh sering disinggahi pedagang dari India, Arab, dan Eropa. Saat era kolonial Belanda, Pulau Weh dijadikan lokasi pelabuhan batu bara untuk kapal uap internasional. Jepang kemudian menduduki pulau ini saat Perang Dunia II dan membangun banyak benteng pertahanan. Setelah kemerdekaan Indonesia, Pulau Weh tetap dianggap kawasan penting karena posisinya sebagai gerbang barat Nusantara. Tahun 1960-an, pemerintah menetapkan sebagian wilayah Pulau Weh sebagai cagar alam laut untuk melindungi ekosistemnya. Seiring waktu, Pulau Weh dikenal luas dengan keindahan bawah laut dan pantainya. Kini, pulau ini jadi destinasi wisata bahari dengan spot diving kelas dunia seperti Iboih dan Rubiah. Sejarah Pulau Weh adalah gabungan kisah alam, perdagangan, dan peran strategis di jalur internasional.",
+    foods: ["Mie Aceh", "Ikan Bakar Sabang", "Kari Kambing", "Kopi Ulee Kareng"],
+    activities: [
+      "Snorkeling di Iboih",
+      "Menyelam di Taman Laut Rubiah",
+      "Mengunjungi Tugu Nol Kilometer Indonesia",
+      "Menikmati sunset di Pantai Gapang",
+      "Jelajah kuliner khas Aceh"
+    ],
+    stories: "Masyarakat setempat percaya laut di sekitar Pulau Weh dijaga roh leluhur yang melindungi para nelayan. Ada legenda tentang seekor naga laut yang menjelma jadi bukit di pulau itu. Pulau Rubiah diyakini dinamai dari seorang perempuan saleh yang makamnya masih diziarahi hingga kini. Tugu Kilometer Nol sering dianggap sakral sebagai simbol awal Indonesia. Kisah-kisah ini bikin Pulau Weh punya daya tarik spiritual selain keindahan alamnya.",
+    gallery: [
+      { img: "assets/lhok-ie-meulee.jpeg", caption:"Lhok Ie Meulee"},
+      { img: "assets/sate-gurita.webp", caption:"Sate Gurita"},
+      { img: "assets/pantai-tapak-gajah.jpg", caption:"Pantai Tapak Gajah"}
+    ]
   },
   {
     id: "sumba",
@@ -292,12 +278,7 @@ let destinations = [
     img: "assets/sumba.jpg",
     desc: "Sumba punya savana luas, pantai eksotis, dan tradisi adat unik.",
     history: "Pulau Sumba sudah dihuni sejak ribuan tahun lalu oleh masyarakat yang hidup dalam sistem adat kuat. Tradisi megalitik berkembang pesat, terlihat dari banyaknya kubur batu besar yang masih bisa dilihat sampai sekarang. Pada masa kerajaan, Sumba terkenal sebagai penghasil kuda tangguh yang diperdagangkan hingga ke luar negeri. Belanda mulai masuk ke Sumba pada abad ke-19, tapi pengaruh adat tetap lebih dominan dibanding kolonial. Setelah kemerdekaan Indonesia, Sumba tetap menjaga tradisi uniknya meski modernisasi mulai masuk. Hingga kini, budaya Marapu sebagai kepercayaan asli masih dianut sebagian masyarakat. Pulau ini juga terkenal dengan kain tenun ikat yang dibuat dengan teknik rumit turun-temurun. Ritual adat seperti Pasola, perang adat dengan menunggang kuda, menjadi ikon budaya Sumba. Di era modern, Sumba mulai dikenal dunia lewat keindahan alamnya seperti pantai dan bukit savana. Sejarah panjang Sumba mencerminkan perpaduan antara tradisi, kepercayaan, dan daya tahan masyarakatnya menghadapi perubahan zaman.",
-    foods: [
-      "Kaledo Sumba",
-      "Palu mara",
-      "Jagung bose",
-      "Kacang mete goreng"
-    ],
+    foods: ["Kaledo Sumba", "Palu mara", "Jagung bose", "Kacang mete goreng"],
     activities: [
       "Menyaksikan festival Pasola",
       "Menjelajahi padang savana",
@@ -305,9 +286,7 @@ let destinations = [
       "Bersantai di Pantai Walakiri",
       "Membeli kain tenun ikat khas Sumba"
     ],
-    stories: [
-      "Legenda Marapu dipercaya sebagai roh leluhur yang selalu menjaga keseimbangan alam dan manusia. Pasola bukan sekadar hiburan, tapi ritual persembahan untuk kesuburan tanah. Kisah kuda Sumba yang gagah sering dianggap titipan dari dewa laut. Tenun ikat dipercaya punya kekuatan simbolik, setiap motif melambangkan doa dan harapan. Cerita-cerita ini bikin Sumba nggak cuma indah, tapi juga sarat makna spiritual."
-    ],
+    stories: "Legenda Marapu dipercaya sebagai roh leluhur yang selalu menjaga keseimbangan alam dan manusia. Pasola bukan sekadar hiburan, tapi ritual persembahan untuk kesuburan tanah. Kisah kuda Sumba yang gagah sering dianggap titipan dari dewa laut. Tenun ikat dipercaya punya kekuatan simbolik, setiap motif melambangkan doa dan harapan. Cerita-cerita ini bikin Sumba nggak cuma indah, tapi juga sarat makna spiritual.",
     gallery: [
       { img: "assets/kain-tenun-sumba.jpg", caption:"Kain Tenun Sumba"},
       { img: "assets/kambing-bakar.webp", caption:"Kambing Bakar"},
@@ -323,12 +302,7 @@ let destinations = [
     img: "assets/halmahera.jpg",
     desc: "Halmahera dikenal dengan hutan tropis, pantai cantik, dan sejarah rempah.",
     history: "Halmahera adalah pulau terbesar di Maluku Utara yang sejak lama jadi pusat perdagangan rempah. Sejak abad ke-14, wilayah ini berada di bawah pengaruh Kesultanan Ternate dan Tidore. Rempah-rempah seperti cengkeh bikin Halmahera jadi rebutan bangsa asing. Portugis datang pertama kali pada abad ke-16, disusul oleh Spanyol, lalu Belanda yang akhirnya berkuasa. Pada masa kolonial, masyarakat Halmahera mengalami kerja paksa dan eksploitasi cengkeh. Meski begitu, adat dan kepercayaan lokal tetap bertahan di pedalaman. Pulau ini juga jadi lokasi penting saat Perang Dunia II karena dijadikan basis militer Jepang. Setelah Indonesia merdeka, Halmahera perlahan bangkit dengan mengandalkan hasil bumi dan laut. Kekayaan alamnya, mulai dari hutan tropis, pantai, sampai tambang, bikin Halmahera dikenal luas. Kini, Halmahera berkembang sebagai destinasi ekowisata dengan daya tarik budaya dan sejarah panjang rempahnya.",
-    foods: [
-      "Papeda",
-      "Ikan kuah kuning",
-      "Sagu bakar",
-      "Kopi Halmahera"
-    ],
+    foods: ["Papeda", "Ikan kuah kuning", "Sagu bakar", "Kopi Halmahera"],
     activities: [
       "Snorkeling di perairan Halmahera",
       "Mengunjungi benteng peninggalan kolonial",
@@ -336,9 +310,7 @@ let destinations = [
       "Mendaki gunung berapi",
       "Wisata kuliner sagu dan ikan"
     ],
-    stories: [
-      "Masyarakat percaya gunung-gunung di Halmahera dihuni roh leluhur yang menjaga alam. Ada kisah tentang danau yang tercipta dari air mata seorang putri yang kehilangan cintanya. Tarian Cakalele melambangkan keberanian dan semangat perang orang Maluku. Lagu-lagu tradisional seperti yang dinyanyikan dengan tifa dipercaya bisa memanggil semangat nenek moyang. Kisah-kisah ini bikin Halmahera punya aura magis di balik sejarah rempahnya."
-    ],
+    stories: "Masyarakat percaya gunung-gunung di Halmahera dihuni roh leluhur yang menjaga alam. Ada kisah tentang danau yang tercipta dari air mata seorang putri yang kehilangan cintanya. Tarian Cakalele melambangkan keberanian dan semangat perang orang Maluku. Lagu-lagu tradisional seperti yang dinyanyikan dengan tifa dipercaya bisa memanggil semangat nenek moyang. Kisah-kisah ini bikin Halmahera punya aura magis di balik sejarah rempahnya.",
     gallery: [
       { img: "assets/saloi.jpg", caption:"Saloi"},
       { img: "assets/ikan-woku.jpg", caption:"Ikan Woku"},
@@ -354,12 +326,7 @@ let destinations = [
     img: "assets/mentawai.jpg",
     desc: "Mentawai populer sebagai surga surfing kelas dunia dengan budaya asli kuat.",
     history: "Kepulauan Mentawai sudah dihuni sejak ribuan tahun lalu oleh masyarakat asli yang hidup selaras dengan alam. Mereka punya sistem adat kuat yang berpusat pada rumah tradisional bernama Uma. Orang Mentawai menjaga tradisi tato tubuh sebagai simbol status, identitas, dan kepercayaan. Saat kolonial Belanda masuk, banyak wilayah Mentawai dijadikan area perkebunan, tapi adat tetap bertahan di pedalaman. Misi Kristen mulai masuk abad ke-20, namun banyak masyarakat tetap menjaga kepercayaan animisme Arat Sabulungan. Setelah Indonesia merdeka, modernisasi perlahan masuk, tapi budaya tradisional masih kokoh. Pada 1990-an, Mentawai mulai dikenal dunia karena ombaknya yang jadi surganya peselancar internasional. Bencana gempa dan tsunami beberapa kali melanda, tapi masyarakat tetap bangkit dengan semangat kebersamaan. Kini, Mentawai jadi ikon wisata budaya dan surfing kelas dunia. Sejarah panjangnya adalah kisah tentang ketahanan budaya dan keterhubungan dengan alam.",
-    foods: [
-      "Sagu lempeng",
-      "Ikan asap",
-      "Ubi rebus",
-      "Daun keladi masak"
-    ],
+    foods: ["Sagu lempeng", "Ikan asap", "Ubi rebus", "Daun keladi masak"],
     activities: [
       "Surfing di ombak kelas dunia",
       "Mengunjungi desa tradisional Mentawai",
@@ -367,9 +334,7 @@ let destinations = [
       "Trekking di hutan hujan",
       "Mencicipi kuliner khas suku Mentawai"
     ],
-    stories: [
-      "Legenda setempat bercerita tentang roh hutan yang menjaga hewan buruan dan hasil bumi. Tato di tubuh masyarakat dipercaya menghubungkan mereka dengan roh leluhur. Kisah Uma sebagai rumah adat dianggap pusat kehidupan sosial dan spiritual. Ombak Mentawai punya mitos sebagai “hadiah laut” yang dijaga dewa samudra. Cerita-cerita ini bikin Mentawai bukan cuma eksotis, tapi juga sarat filosofi hidup."
-    ],
+    stories: "Legenda setempat bercerita tentang roh hutan yang menjaga hewan buruan dan hasil bumi. Tato di tubuh masyarakat dipercaya menghubungkan mereka dengan roh leluhur. Kisah Uma sebagai rumah adat dianggap pusat kehidupan sosial dan spiritual. Ombak Mentawai punya mitos sebagai 'hadiah laut' yang dijaga dewa samudra. Cerita-cerita ini bikin Mentawai bukan cuma eksotis, tapi juga sarat filosofi hidup.",
     gallery: [
       { img: "assets/sikerei.webp", caption:"Sikerei"},
       { img: "assets/batra.jpeg", caption:"Batra"},
@@ -385,12 +350,7 @@ let destinations = [
     img: "assets/flores.jpg",
     desc: "Flores terkenal dengan Danau Kelimutu, Komodo, dan budaya Katoliknya.",
     history: "Pulau Flores punya sejarah panjang sejak era kolonial Portugis abad ke-16 yang ngasih nama 'Cabo de Flores' karena pesisirnya penuh bunga. Sejak itu, Flores jadi basis penyebaran Katolik dan sampai sekarang masih jadi salah satu pulau dengan mayoritas penduduk Katolik di Indonesia. Pada masa perdagangan, Flores dikenal lewat komoditas cendana dan hasil alam lain yang ditukar dengan barang impor. Kolonial Belanda kemudian masuk, meski pengaruh Portugis masih kuat, terutama di bagian timur pulau. Saat Perang Dunia II, tentara Jepang sempat menduduki wilayah ini dan meninggalkan peninggalan sejarah. Setelah kemerdekaan Indonesia, Flores makin dikenal karena kekayaan budaya dan alamnya. Di beberapa daerah, masih banyak tradisi adat yang hidup berdampingan dengan kepercayaan Katolik. Tahun 1990-an, pariwisata mulai berkembang pesat terutama karena Labuan Bajo sebagai pintu ke Taman Nasional Komodo. Gunung Kelimutu dengan tiga danau ajaibnya juga jadi simbol unik dari sejarah alam Flores. Kini, Flores bukan cuma dikenal di Indonesia, tapi juga dunia lewat perpaduan budaya, agama, dan keindahan alamnya.",
-    foods: [
-      "Jagung bose",
-      "Se'i daging sapi",
-      "Rumpu rampe",
-      "Kopi Flores Bajawa"
-    ],
+    foods: ["Jagung bose", "Se'i daging sapi", "Rumpu rampe", "Kopi Flores Bajawa"],
     activities: [
       "Menyaksikan sunrise di Danau Kelimutu",
       "Mengunjungi Taman Nasional Komodo",
@@ -398,16 +358,14 @@ let destinations = [
       "Snorkeling di Labuan Bajo",
       "Mencicipi kopi khas Flores"
     ],
-    stories: [
-      "Kisah paling terkenal dari Flores adalah legenda tiga danau Kelimutu yang warnanya selalu berubah sesuai arwah leluhur. Desa Wae Rebo juga punya cerita magis dengan rumah adat berbentuk kerucut yang katanya dijaga roh penjaga. Tradisi perang cambuk caci masih jadi tontonan seru yang dianggap sebagai simbol keberanian dan persaudaraan. Di banyak desa, masyarakat masih menjaga tradisi tenun ikat yang diwariskan turun-temurun."
-    ],
+    stories: "Kisah paling terkenal dari Flores adalah legenda tiga danau Kelimutu yang warnanya selalu berubah sesuai arwah leluhur. Desa Wae Rebo juga punya cerita magis dengan rumah adat berbentuk kerucut yang katanya dijaga roh penjaga. Tradisi perang cambuk caci masih jadi tontonan seru yang dianggap sebagai simbol keberanian dan persaudaraan. Di banyak desa, masyarakat masih menjaga tradisi tenun ikat yang diwariskan turun-temurun.",
     gallery: [
       { img: "assets/rumah-adat-wae-rebo.jpg", caption:"Rumah Adat Wae Rebo"},
       { img: "assets/sayur-rumpu-rampe.webp", caption:"Sayur Rumpu Rampe"},
       { img: "assets/kain-tenun-songke.jpeg", caption:"Kain Tenun Songke"}
     ]
   },
-   {
+  {
     id: "kepulauan-seribu",
     name: "Kepulauan Seribu",
     location: "DKI Jakarta",
@@ -416,12 +374,7 @@ let destinations = [
     img: "assets/kepulauan-seribu.jpg",
     desc: "Kepulauan Seribu jadi destinasi dekat Jakarta dengan pulau kecil nan indah.",
     history: "Kepulauan Seribu udah dikenal sejak masa kolonial VOC abad ke-17 sebagai jalur perdagangan dan pertahanan laut Batavia. Pulau-pulau kecilnya sering dipakai buat benteng, karantina, sampai tempat pengasingan tahanan politik. Pulau Onrust adalah yang paling bersejarah, dulu jadi galangan kapal VOC dan sempat diserang armada Inggris. Selain itu, Belanda juga bikin rumah sakit karantina di sana buat penyakit menular. Pas masa kemerdekaan, Kepulauan Seribu sempat jadi titik penting pertahanan Jakarta dari laut. Tahun 1970-an, pemerintah mulai ngebuka pulau-pulau di sini buat pariwisata dan konservasi. Sebagian pulau dijadikan taman nasional laut dengan fokus ke perlindungan terumbu karang. Seiring waktu, Kepulauan Seribu berkembang jadi destinasi wisata favorit warga Jakarta. Meski deket ibu kota, sejarah panjang kolonialnya masih bisa ditemuin di sisa bangunan tua dan kuburan Belanda di beberapa pulau. Sampai sekarang, wilayah ini masih jadi kombinasi unik antara peninggalan sejarah dan wisata bahari modern.",
-    foods: [
-      "Kerak telor ala pesisir",
-      "Ikan bakar khas nelayan",
-      "Sambal kecap cumi",
-      "Es kelapa muda segar"
-    ],
+    foods: ["Kerak telor ala pesisir", "Ikan bakar khas nelayan", "Sambal kecap cumi", "Es kelapa muda segar"],
     activities: [
       "Snorkeling di Pulau Pramuka",
       "Menjelajahi Pulau Tidung dengan sepeda",
@@ -429,9 +382,7 @@ let destinations = [
       "Diving melihat terumbu karang",
       "Mencicipi seafood segar"
     ],
-    stories: [
-      "Ada cerita mistis di Pulau Onrust, katanya arwah para tahanan politik dan korban penyakit masih gentayangan. Pulau Kelor juga sering dikaitin sama legenda benteng Martello yang angker tapi ikonik. Pulau Pramuka punya kisah sukses jadi pusat konservasi penyu sisik yang hampir punah. Sementara Pulau Tidung populer karena Jembatan Cinta yang dipercaya bawa hoki buat pasangan. Semua kisah itu bikin Kepulauan Seribu punya aura beda, gabungan antara sejarah kelam, budaya lokal, dan cerita romantis."
-    ],
+    stories: "Ada cerita mistis di Pulau Onrust, katanya arwah para tahanan politik dan korban penyakit masih gentayangan. Pulau Kelor juga sering dikaitin sama legenda benteng Martello yang angker tapi ikonik. Pulau Pramuka punya kisah sukses jadi pusat konservasi penyu sisik yang hampir punah. Sementara Pulau Tidung populer karena Jembatan Cinta yang dipercaya bawa hoki buat pasangan. Semua kisah itu bikin Kepulauan Seribu punya aura beda, gabungan antara sejarah kelam, budaya lokal, dan cerita romantis.",
     gallery: [
       { img: "assets/Pulau-Tidung.jpeg", caption:"Pulau Tidung"},
       { img: "assets/pepes-ikan.jpg", caption:"Pepes Ikan"},
@@ -447,12 +398,7 @@ let destinations = [
     img: "assets/danau-sentarum.jpeg",
     desc: "Danau Sentarum adalah ekosistem rawa unik dengan keanekaragaman hayati tinggi.",
     history: "Danau Sentarum di Kapuas Hulu, Kalimantan Barat, udah ada sejak ribuan tahun lalu sebagai bagian dari sistem sungai Kapuas. Wilayah ini unik karena berupa danau musiman yang berubah jadi rawa luas pas musim hujan, terus surut lagi pas kemarau. Sejak lama, masyarakat Dayak dan Melayu udah tinggal di sekitar danau, hidup dari ikan, hutan, dan hasil alam. Pas era kolonial Belanda, kawasan ini jarang tersentuh karena aksesnya susah, tapi tetap jadi jalur dagang tradisional. Tahun 1982, Danau Sentarum ditetapkan sebagai Suaka Margasatwa karena punya keanekaragaman hayati luar biasa. Terus, tahun 1999 statusnya naik jadi Taman Nasional Danau Sentarum, dengan fokus perlindungan ikan air tawar dan hutan rawa gambut. Tempat ini dikenal sebagai habitat penting ikan arwana super red yang bernilai tinggi. Selain itu, banyak spesies endemik, termasuk burung langka dan orangutan yang bergantung pada ekosistem danau. Pemerintah dan LSM sering turun tangan buat ngejaga kawasan ini dari ancaman illegal logging dan perburuan. Sampai sekarang, Danau Sentarum jadi contoh penting harmonisasi antara manusia, air, dan hutan di jantung Kalimantan.",
-    foods: [
-      "Ikan asap Danau Sentarum",
-      "Sayur umbut rotan",
-      "Tempoyak ikan",
-      "Lemang khas Dayak"
-    ],
+    foods: ["Ikan asap Danau Sentarum", "Sayur umbut rotan", "Tempoyak ikan", "Lemang khas Dayak"],
     activities: [
       "Menjelajahi rumah panggung terapung",
       "Naik perahu keliling danau",
@@ -460,9 +406,7 @@ let destinations = [
       "Mencoba kuliner khas ikan asap",
       "Belajar budaya Dayak lokal"
     ],
-    stories: [
-      "Ada cerita rakyat tentang naga raksasa penjaga air yang dipercaya tinggal di kedalaman Danau Sentarum. Masyarakat juga percaya, kalau air tiba-tiba keruh padahal nggak hujan, itu tandanya roh leluhur lagi marah. Di musim tertentu, nelayan suka bikin upacara syukuran biar hasil tangkapan ikan melimpah. Ada pula kisah mistis tentang cahaya misterius di malam hari yang katanya berasal dari roh penunggu danau. Semua cerita ini bikin Sentarum punya aura magis selain nilai ekologinya."
-    ],
+    stories: "Ada cerita rakyat tentang naga raksasa penjaga air yang dipercaya tinggal di kedalaman Danau Sentarum. Masyarakat juga percaya, kalau air tiba-tiba keruh padahal nggak hujan, itu tandanya roh leluhur lagi marah. Di musim tertentu, nelayan suka bikin upacara syukuran biar hasil tangkapan ikan melimpah. Ada pula kisah mistis tentang cahaya misterius di malam hari yang katanya berasal dari roh penunggu danau. Semua cerita ini bikin Sentarum punya aura magis selain nilai ekologinya.",
     gallery: [
       { img: "assets/ikan-tapah.jpg", caption:"Ikan Tapah"},
       { img: "assets/festival-danau-sentarum.jpg", caption:"Festival Danau Sentarum"},
@@ -478,12 +422,7 @@ let destinations = [
     img: "assets/nias.jpg",
     desc: "Nias dikenal dengan tradisi lompat batu dan ombak besar untuk surfing.",
     history: "Pulau Nias di Sumatera Utara udah dihuni sejak ribuan tahun lalu oleh masyarakat asli yang dikenal sebagai Ono Niha. Mereka hidup dengan sistem adat kuat dan desa berbenteng buat bertahan dari serangan. Pada masa lampau, Nias terkenal dengan tradisi perang antar kampung yang keras. Tradisi itu bikin muncul budaya rumah adat besar dari kayu keras yang tahan lama. Sejak abad ke-17, pedagang asing datang ke Nias buat dagang budak dan hasil bumi. Pas masa kolonial, Belanda masuk dan menaklukkan Nias, sekaligus menghapus perbudakan. Abad ke-19, misionaris Jerman bawa agama Kristen yang berkembang pesat sampai sekarang. Tradisi lompat batu lahir dari latihan perang pemuda Nias dan jadi ikon budaya. Tahun 2005, gempa besar mengguncang Nias, ngerusak banyak infrastruktur dan desa adat. Meski begitu, masyarakat bangkit lagi, dan sekarang Nias dikenal dunia lewat ombak surfing Sorake-Lagundri dan budaya yang masih terjaga.",
-    foods: [
-      "Babi Guling Nias",
-      "Lehedalo Nifange",
-      "Gowi Nifufu",
-      "Sakudu Nifange"
-    ],
+    foods: ["Babi Guling Nias", "Lehedalo Nifange", "Gowi Nifufu", "Sakudu Nifange"],
     activities: [
       "Surfing di Sorake dan Lagundri",
       "Menonton tradisi lompat batu",
@@ -491,9 +430,7 @@ let destinations = [
       "Mencicipi kuliner khas Nias",
       "Menikmati tarian perang tradisional"
     ],
-    stories: [
-      "Legenda lokal bilang, lompat batu dulunya jadi syarat wajib biar pemuda dianggap dewasa dan siap perang. Banyak cerita tentang rumah adat besar yang diyakini punya roh pelindung keluarga. Tradisi tarian perang sering dianggap bukan cuma hiburan, tapi doa keberanian. Surfing Nias melegenda sejak peselancar asing nemuin ombaknya di 1970-an. Semua cerita ini bikin Nias dipandang sebagai pulau keberanian, keuletan, dan kebanggaan budaya.",
-    ],
+    stories: "Legenda lokal bilang, lompat batu dulunya jadi syarat wajib biar pemuda dianggap dewasa dan siap perang. Banyak cerita tentang rumah adat besar yang diyakini punya roh pelindung keluarga. Tradisi tarian perang sering dianggap bukan cuma hiburan, tapi doa keberanian. Surfing Nias melegenda sejak peselancar asing nemuin ombaknya di 1970-an. Semua cerita ini bikin Nias dipandang sebagai pulau keberanian, keuletan, dan kebanggaan budaya.",
     gallery: [
       { img: "assets/tradisi-lompat-batu-(Fahombo).png", caption:"Tradisi Lompat Batu (Fahombo)"},
       { img: "assets/gowi-nifufu.jpg", caption:"Gowi Nifufu"},
@@ -502,430 +439,7 @@ let destinations = [
   }
 ];
 
-// ====== State ======
-let wishlist = [];
-let visited = [];
-
-// ====== Render Destinations - New Cinematic Layout ======
-function renderDestinations(list) {
-  const $grid = $("#destinationsGrid");
-  $grid.empty();
-
-  if (list.length === 0) {
-    $grid.html(`
-      <div class="empty-state">
-        <i class="fas fa-map-marked-alt"></i>
-        <h4>No destinations found</h4>
-        <p>Try adjusting your search or filters</p>
-      </div>
-    `);
-    return;
-  }
-
-  $.each(list, function (_, d) {
-    const isWishlisted = wishlist.includes(d.id);
-    const isVisited = visited.includes(d.id);
-    
-    const destinationItem = `
-      <div class="destination-item" data-id="${d.id}">
-        <div class="destination-bg" style="background-image: url('${d.img}')"></div>
-        <div class="destination-overlay"></div>
-        <div class="destination-content">
-          <div class="destination-meta">
-            <span class="destination-type">${d.type}</span>
-            <span class="destination-region">
-              <i class="fas fa-map-marker-alt"></i>
-              ${d.region}
-            </span>
-          </div>
-          <h2 class="destination-title">${d.name}</h2>
-          <p class="destination-location">${d.location}</p>
-          <p class="destination-description">${d.desc}</p>
-          <div class="destination-actions">
-            <button class="action-btn primary detail-btn" data-id="${d.id}">
-              <i class="fas fa-eye"></i>
-              Explore
-            </button>
-            <button class="action-btn wishlist-btn ${isWishlisted ? 'active' : ''}" data-id="${d.id}">
-              <i class="fas fa-heart"></i>
-              ${isWishlisted ? 'Wishlisted' : 'Wishlist'}
-            </button>
-            <button class="action-btn visited-btn ${isVisited ? 'active' : ''}" data-id="${d.id}">
-              <i class="fas fa-check"></i>
-              ${isVisited ? 'Visited' : 'Mark Visited'}
-            </button>
-            <button class="action-btn edit-btn" data-id="${d.id}">
-              <i class="fas fa-edit"></i>
-              Edit
-            </button>
-            <button class="action-btn delete-btn" data-id="${d.id}">
-              <i class="fas fa-trash"></i>
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
-    `;
-    $grid.append(destinationItem);
-  });
-
-  $(".destination-item").each(function(index) {
-    $(this).css({
-      'animation-delay': (index * 0.1) + 's',
-      'animation': 'fadeIn 0.6s ease forwards'
-    });
-  });
+// Export data untuk digunakan di file lain
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { destinations };
 }
-
-// ====== Filters & Search ======
-function applyFilters() {
-  const keyword = $("#searchInput").val().toLowerCase();
-  const region = $("#regionFilter").val();
-  const type = $("#typeFilter").val();
-
-  const filtered = destinations.filter(d => {
-    const matchKeyword = d.name.toLowerCase().includes(keyword) || d.location.toLowerCase().includes(keyword);
-    const matchRegion = !region || d.region === region;
-    const matchType = !type || d.type === type;
-    return matchKeyword && matchRegion && matchType;
-  });
-
-  renderDestinations(filtered);
-}
-
-function resetFilters() {
-  $("#searchInput").val("");
-  $("#regionFilter").val("");
-  $("#typeFilter").val("");
-  renderDestinations(destinations);
-}
-
-// ====== View Toggle ======
-function filterDestinations(view) {
-  if (view === "all") {
-    renderDestinations(destinations);
-  } else if (view === "wishlist") {
-    const filtered = destinations.filter(d => wishlist.includes(d.id));
-    renderDestinations(filtered);
-  } else if (view === "visited") {
-    const filtered = destinations.filter(d => visited.includes(d.id));
-    renderDestinations(filtered);
-  }
-
-  $(".toggle-btn").removeClass("active");
-  $(`.toggle-btn[data-view="${view}"]`).addClass("active");
-}
-
-// ====== Modal Functions ======
-function showModal(dest) {
-  const activities = dest.activities ? dest.activities.map(a => `<li>${a}</li>`).join("") : "<li>-</li>";
-  const foods = dest.foods ? dest.foods.map(f => `<li>${f}</li>`).join("") : "<li>-</li>";
-  const stories = dest.stories || "";
-  
-  // Generate gallery HTML if available
-  let galleryHTML = "";
-  if (dest.gallery && dest.gallery.length > 0) {
-    galleryHTML = `
-      <div class="modal-gallery">
-        <h3>Galeri Foto</h3>
-        <div class="gallery-grid">
-          ${dest.gallery.map(item => `
-            <div class="gallery-item">
-              <img src="${item.img}" alt="${item.caption}" onerror="this.src='assets/placeholder.jpg'">
-              <p class="gallery-caption">${item.caption}</p>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  }
-
-  $("#modalBody").html(`
-    <img src="${dest.img}" alt="${dest.name}" class="modal-hero">
-    <div class="modal-info">
-      <h2 class="modal-title">${dest.name}</h2>
-      <p class="modal-location">
-        <i class="fas fa-map-marker-alt"></i>
-        ${dest.location}
-      </p>
-      <div class="modal-description">${dest.desc}</div>
-      
-      ${galleryHTML}
-      
-      <div class="modal-history">
-        <h3>Sejarah</h3>
-        <p>${dest.history}</p>
-      </div>
-      <div class="modal-activities">
-        <h3>Aktivitas</h3>
-        <ul>${activities}</ul>
-      </div>
-      <div class="modal-foods">
-        <h3>Makanan Khas</h3>
-        <ul>${foods}</ul>
-      </div>
-      <div class="modal-stories">
-        <h3>Cerita & Budaya</h3>
-        <p>${stories}</p>
-      </div>
-    </div>
-  `);
-  $("#destinationModal").addClass("active");
-}
-
-function closeModal() {
-  $("#destinationModal").removeClass("active");
-}
-
-function openAddModal() {
-  $("#addDestinationModal").addClass("active");
-}
-
-function closeAddModal() {
-  $("#addDestinationModal").removeClass("active");
-}
-
-function openEditModal(dest) {
-  $("#editDestId").val(dest.id);
-  $("#editDestName").val(dest.name);
-  $("#editDestLocation").val(dest.location);
-  $("#editDestRegion").val(dest.region);
-  $("#editDestType").val(dest.type);
-  $("#editDestDescription").val(dest.desc);
-  $("#editDestHistory").val(dest.history);
-  $("#editDestImageUrl").val(dest.img.replace("assets/", ""));
-  $("#editDestinationModal").addClass("active");
-}
-
-function closeEditModal() {
-  $("#editDestinationModal").removeClass("active");
-}
-
-function openLightbox(imgSrc, caption) {
-  $("#lightboxImg").attr("src", imgSrc);
-  $("#lightboxCaption").text(caption);
-  $("#lightbox").addClass("active");
-}
-
-function closeLightbox() {
-  $("#lightbox").removeClass("active");
-}
-
-// ====== Utility Functions ======
-function scrollToDestinations() {
-  const $dest = $("#destinations");
-  if ($dest.length) {
-    if (typeof filterDestinations === "function") {
-      filterDestinations("all");
-    }
-    $("html, body").animate({ scrollTop: $dest.offset().top }, 600);
-    $dest.addClass("pulse-highlight");
-    setTimeout(() => $dest.removeClass("pulse-highlight"), 1200);
-  }
-}
-
-function scrollToAbout() {
-  const $about = $("#about");
-  if ($about.length) {
-    $("html, body").animate({ scrollTop: $about.offset().top }, 600);
-    $about.addClass("pulse-highlight");
-    setTimeout(() => $about.removeClass("pulse-highlight"), 1200);
-  }
-}
-
-function handleScrollAnimations() {
-  const fadeEls = document.querySelectorAll(".fade-in");
-  fadeEls.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add("visible");
-    }
-  });
-}
-
-// ====== Event Handlers ======
-$(document).ready(function () {
-  renderDestinations(destinations);
-
-  $("#searchInput").on("input", applyFilters);
-  $("#regionFilter").on("change", applyFilters);
-  $("#typeFilter").on("change", applyFilters);
-
-  $(document).on("click", ".detail-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    const dest = destinations.find(d => d.id === id);
-    if (dest) showModal(dest);
-  });
-
-  $(document).on("click", ".wishlist-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    if (!wishlist.includes(id)) {
-      wishlist.push(id);
-      $(this).addClass("active").html('<i class="fas fa-heart"></i> Wishlisted');
-    } else {
-      wishlist = wishlist.filter(w => w !== id);
-      $(this).removeClass("active").html('<i class="fas fa-heart"></i> Wishlist');
-    }
-  });
-
-  $(document).on("click", ".visited-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    if (!visited.includes(id)) {
-      visited.push(id);
-      $(this).addClass("active").html('<i class="fas fa-check"></i> Visited');
-    } else {
-      visited = visited.filter(v => v !== id);
-      $(this).removeClass("active").html('<i class="fas fa-check"></i> Mark Visited');
-    }
-  });
-
-  $(document).on("click", ".delete-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    if (confirm("Are you sure you want to delete this destination?")) {
-      destinations = destinations.filter(d => d.id !== id);
-      applyFilters();
-    }
-  });
-
-  $(document).on("click", ".edit-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    const dest = destinations.find(d => d.id === id);
-    if (dest) openEditModal(dest);
-  });
-
-  $(document).on("click", ".destination-item", function (e) {
-    if (!$(e.target).closest("button").length) {
-      const id = $(this).data("id");
-      const dest = destinations.find(d => d.id === id);
-      if (dest) showModal(dest);
-    }
-  });
-
-  $(document).on("click", ".modal-close", function () {
-    closeModal();
-    closeAddModal();
-    closeEditModal();
-  });
-
-  $(document).on("click", ".modal-overlay", function (e) {
-    if ($(e.target).hasClass("modal-overlay")) {
-      closeModal();
-      closeAddModal();
-      closeEditModal();
-    }
-  });
-
-  // Gallery image click event
-  $(document).on("click", ".gallery-item img", function() {
-    const imgSrc = $(this).attr("src");
-    const caption = $(this).closest(".gallery-item").find(".gallery-caption").text();
-    openLightbox(imgSrc, caption);
-  });
-
-  // Close lightbox on background click
-  $("#lightbox").on("click", function(e) {
-    if ($(e.target).is("#lightbox")) {
-      closeLightbox();
-    }
-  });
-
-  $("#addDestinationForm").on("submit", function (e) {
-    e.preventDefault();
-    const newDest = {
-      id: Date.now().toString(),
-      name: $("#destName").val(),
-      location: $("#destLocation").val(),
-      region: $("#destRegion").val(),
-      type: $("#destType").val(),
-      img: "assets/" + $("#destImageUrl").val(),
-      desc: $("#destDescription").val(),
-      history: $("#destHistory").val(),
-      activities: [],
-      foods: [],
-      stories: ""
-    };
-    destinations.push(newDest);
-    renderDestinations(destinations);
-    closeAddModal();
-    this.reset();
-  });
-
-  $("#editDestinationForm").on("submit", function (e) {
-    e.preventDefault();
-    const id = $("#editDestId").val();
-    const index = destinations.findIndex(d => d.id === id);
-    if (index !== -1) {
-      destinations[index] = {
-        ...destinations[index],
-        name: $("#editDestName").val(),
-        location: $("#editDestLocation").val(),
-        region: $("#editDestRegion").val(),
-        type: $("#editDestType").val(),
-        img: "assets/" + $("#editDestImageUrl").val(),
-        desc: $("#editDestDescription").val(),
-        history: $("#editDestHistory").val()
-      };
-      renderDestinations(destinations);
-      closeEditModal();
-    }
-  });
-
-  $(".hamburger").on("click", function () {
-    $(".nav-menu").toggleClass("active");
-    $(this).toggleClass("active");
-  });
-
-  $(".nav-link").on("click", function (e) {
-    e.preventDefault();
-    const target = $(this).attr("href");
-
-    $(".nav-link").removeClass("active");
-    $(this).addClass("active");
-
-    if (target === "#home") {
-      $("html, body").animate({ scrollTop: $("#home").offset().top }, 500);
-    } else if (target === "#destinations") {
-      $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
-      filterDestinations("all");
-    } else if (target === "#about") {
-      scrollToAbout();
-    }
-
-    $(".nav-menu").removeClass("active");
-    $(".hamburger").removeClass("active");
-  });
-
-  $(window).on("scroll", function () {
-    const scrollPos = $(document).scrollTop();
-
-    const homeTop = $("#home").offset().top - 100;
-    const destTop = $("#destinations").offset().top - 100;
-    const aboutTop = $("#about").offset().top - 100;
-
-    $(".nav-link").removeClass("active");
-
-    if (scrollPos >= aboutTop) {
-      $(".nav-link[href='#about']").addClass("active");
-    } else if (scrollPos >= destTop) {
-      $(".nav-link[href='#destinations']").addClass("active");
-    } else if (scrollPos >= homeTop) {
-      $(".nav-link[href='#home']").addClass("active");
-    }
-  });
-
-  window.addEventListener("scroll", handleScrollAnimations);
-  window.addEventListener("load", handleScrollAnimations);
-
-  $(document).on("keydown", function(e) {
-    if (e.key === "Escape") {
-      closeModal();
-      closeAddModal();
-      closeEditModal();
-    }
-  });
-});
