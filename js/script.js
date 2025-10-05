@@ -1,8 +1,8 @@
 // ====== State ======
-let wishlist = [];
-let visited = [];
+let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+let visited = JSON.parse(localStorage.getItem('visited') || '[]');
 
-// ====== Render Destinations - New Cinematic Layout ======
+// ====== Render Destinations - Redirect to Detail Page ======
 function renderDestinations(list) {
   const $grid = $("#destinationsGrid");
   $grid.empty();
@@ -38,10 +38,10 @@ function renderDestinations(list) {
           <p class="destination-location">${d.location}</p>
           <p class="destination-description">${d.desc}</p>
           <div class="destination-actions">
-            <button class="action-btn primary detail-btn" data-id="${d.id}">
+            <a href="destination.html?id=${d.id}" class="action-btn primary detail-btn">
               <i class="fas fa-eye"></i>
               Explore
-            </button>
+            </a>
             <button class="action-btn wishlist-btn ${isWishlisted ? 'active' : ''}" data-id="${d.id}">
               <i class="fas fa-heart"></i>
               ${isWishlisted ? 'Wishlisted' : 'Wishlist'}
@@ -113,66 +113,6 @@ function filterDestinations(view) {
 }
 
 // ====== Modal Functions ======
-function showModal(dest) {
-  const activities = dest.activities ? dest.activities.map(a => `<li>${a}</li>`).join("") : "<li>-</li>";
-  const foods = dest.foods ? dest.foods.map(f => `<li>${f}</li>`).join("") : "<li>-</li>";
-  const stories = dest.stories || "";
-  
-  // Generate gallery HTML if available
-  let galleryHTML = "";
-  if (dest.gallery && dest.gallery.length > 0) {
-    galleryHTML = `
-      <div class="modal-gallery">
-        <h3>Galeri Foto</h3>
-        <div class="gallery-grid">
-          ${dest.gallery.map(item => `
-            <div class="gallery-item">
-              <img src="${item.img}" alt="${item.caption}" onerror="this.src='assets/placeholder.jpg'">
-              <p class="gallery-caption">${item.caption}</p>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  }
-
-  $("#modalBody").html(`
-    <img src="${dest.img}" alt="${dest.name}" class="modal-hero">
-    <div class="modal-info">
-      <h2 class="modal-title">${dest.name}</h2>
-      <p class="modal-location">
-        <i class="fas fa-map-marker-alt"></i>
-        ${dest.location}
-      </p>
-      <div class="modal-description">${dest.desc}</div>
-      
-      ${galleryHTML}
-      
-      <div class="modal-history">
-        <h3>Sejarah</h3>
-        <p>${dest.history}</p>
-      </div>
-      <div class="modal-activities">
-        <h3>Aktivitas</h3>
-        <ul>${activities}</ul>
-      </div>
-      <div class="modal-foods">
-        <h3>Makanan Khas</h3>
-        <ul>${foods}</ul>
-      </div>
-      <div class="modal-stories">
-        <h3>Cerita & Budaya</h3>
-        <p>${stories}</p>
-      </div>
-    </div>
-  `);
-  $("#destinationModal").addClass("active");
-}
-
-function closeModal() {
-  $("#destinationModal").removeClass("active");
-}
-
 function openAddModal() {
   $("#addDestinationModal").addClass("active");
 }
@@ -195,16 +135,6 @@ function openEditModal(dest) {
 
 function closeEditModal() {
   $("#editDestinationModal").removeClass("active");
-}
-
-function openLightbox(imgSrc, caption) {
-  $("#lightboxImg").attr("src", imgSrc);
-  $("#lightboxCaption").text(caption);
-  $("#lightbox").addClass("active");
-}
-
-function closeLightbox() {
-  $("#lightbox").removeClass("active");
 }
 
 // ====== Utility Functions ======
@@ -247,15 +177,9 @@ $(document).ready(function () {
   $("#regionFilter").on("change", applyFilters);
   $("#typeFilter").on("change", applyFilters);
 
-  $(document).on("click", ".detail-btn", function (e) {
-    e.stopPropagation();
-    const id = $(this).data("id");
-    const dest = destinations.find(d => d.id === id);
-    if (dest) showModal(dest);
-  });
-
   $(document).on("click", ".wishlist-btn", function (e) {
     e.stopPropagation();
+    e.preventDefault();
     const id = $(this).data("id");
     if (!wishlist.includes(id)) {
       wishlist.push(id);
@@ -264,10 +188,12 @@ $(document).ready(function () {
       wishlist = wishlist.filter(w => w !== id);
       $(this).removeClass("active").html('<i class="fas fa-heart"></i> Wishlist');
     }
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
   });
 
   $(document).on("click", ".visited-btn", function (e) {
     e.stopPropagation();
+    e.preventDefault();
     const id = $(this).data("id");
     if (!visited.includes(id)) {
       visited.push(id);
@@ -276,10 +202,12 @@ $(document).ready(function () {
       visited = visited.filter(v => v !== id);
       $(this).removeClass("active").html('<i class="fas fa-check"></i> Mark Visited');
     }
+    localStorage.setItem('visited', JSON.stringify(visited));
   });
 
   $(document).on("click", ".delete-btn", function (e) {
     e.stopPropagation();
+    e.preventDefault();
     const id = $(this).data("id");
     if (confirm("Are you sure you want to delete this destination?")) {
       destinations = destinations.filter(d => d.id !== id);
@@ -289,44 +217,21 @@ $(document).ready(function () {
 
   $(document).on("click", ".edit-btn", function (e) {
     e.stopPropagation();
+    e.preventDefault();
     const id = $(this).data("id");
     const dest = destinations.find(d => d.id === id);
     if (dest) openEditModal(dest);
   });
 
-  $(document).on("click", ".destination-item", function (e) {
-    if (!$(e.target).closest("button").length) {
-      const id = $(this).data("id");
-      const dest = destinations.find(d => d.id === id);
-      if (dest) showModal(dest);
-    }
-  });
-
   $(document).on("click", ".modal-close", function () {
-    closeModal();
     closeAddModal();
     closeEditModal();
   });
 
   $(document).on("click", ".modal-overlay", function (e) {
     if ($(e.target).hasClass("modal-overlay")) {
-      closeModal();
       closeAddModal();
       closeEditModal();
-    }
-  });
-
-  // Gallery image click event
-  $(document).on("click", ".gallery-item img", function() {
-    const imgSrc = $(this).attr("src");
-    const caption = $(this).closest(".gallery-item").find(".gallery-caption").text();
-    openLightbox(imgSrc, caption);
-  });
-
-  // Close lightbox on background click
-  $("#lightbox").on("click", function(e) {
-    if ($(e.target).is("#lightbox")) {
-      closeLightbox();
     }
   });
 
@@ -383,12 +288,12 @@ $(document).ready(function () {
     $(".nav-link").removeClass("active");
     $(this).addClass("active");
 
-    if (target === "#home") {
+    if (target === "index.html#home" || target === "#home") {
       $("html, body").animate({ scrollTop: $("#home").offset().top }, 500);
-    } else if (target === "#destinations") {
+    } else if (target === "index.html#destinations" || target === "#destinations") {
       $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
       filterDestinations("all");
-    } else if (target === "#about") {
+    } else if (target === "index.html#about" || target === "#about") {
       scrollToAbout();
     }
 
@@ -406,11 +311,11 @@ $(document).ready(function () {
     $(".nav-link").removeClass("active");
 
     if (scrollPos >= aboutTop) {
-      $(".nav-link[href='#about']").addClass("active");
+      $(".nav-link[href='#about'], .nav-link[href='index.html#about']").addClass("active");
     } else if (scrollPos >= destTop) {
-      $(".nav-link[href='#destinations']").addClass("active");
+      $(".nav-link[href='#destinations'], .nav-link[href='index.html#destinations']").addClass("active");
     } else if (scrollPos >= homeTop) {
-      $(".nav-link[href='#home']").addClass("active");
+      $(".nav-link[href='#home'], .nav-link[href='index.html#home']").addClass("active");
     }
   });
 
@@ -419,7 +324,6 @@ $(document).ready(function () {
 
   $(document).on("keydown", function(e) {
     if (e.key === "Escape") {
-      closeModal();
       closeAddModal();
       closeEditModal();
     }

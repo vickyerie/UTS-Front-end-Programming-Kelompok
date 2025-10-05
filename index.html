@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NUSANTARA - Explore Indonesia's Heritage</title>
+  <title>NUSANTARA</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,12 +13,12 @@
   <header class="header">
     <div class="container">
       <div class="nav-brand">
-        <h1>NUSANTARA</h1>
+        <h1><a href="index.html" style="color: inherit; text-decoration: none;">NUSANTARA</a></h1>
       </div>
       <nav class="nav-menu">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#destinations" class="nav-link">Destinations</a>
-        <a href="#about" class="nav-link">About</a>
+        <a href="index.html#home" class="nav-link active">Home</a>
+        <a href="index.html#destinations" class="nav-link">Destinations</a>
+        <a href="index.html#about" class="nav-link">About</a>
       </nav>
       <div class="hamburger">
         <span></span>
@@ -80,6 +80,7 @@
             <option value="Papua">Papua</option>
             <option value="Bali">Bali</option>
             <option value="NTT">Nusa Tenggara</option>
+            <option value="Maluku">Maluku</option>
           </select>
           <select id="typeFilter" class="filter-select">
             <option value="">All Types</option>
@@ -88,6 +89,7 @@
             <option value="Mountain">Mountain</option>
             <option value="Lake">Lake</option>
             <option value="Island">Island</option>
+            <option value="Archipelago">Archipelago</option>
           </select>
           <button class="reset-filters" onclick="resetFilters()">
             <i class="fas fa-undo"></i>
@@ -120,7 +122,7 @@
         <h2>About NUSANTARA</h2>
         <div class="about-divider"></div>
         <p class="about-subtitle">
-          NUSANTARA is designed to showcase Indonesia’s 
+          NUSANTARA is designed to showcase Indonesia's 
           natural beauty, rich culture, and heritage to the world.
         </p>
       </div>
@@ -222,16 +224,6 @@
     </div>
   </footer>
 
-  <!-- Destination Detail Modal -->
-  <div class="modal-overlay" id="destinationModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
   <!-- Add Destination Modal -->
   <div class="modal-overlay" id="addDestinationModal">
     <div class="modal-content add-modal">
@@ -260,6 +252,7 @@
               <option value="Papua">Papua</option>
               <option value="Bali">Bali</option>
               <option value="NTT">Nusa Tenggara</option>
+              <option value="Maluku">Maluku</option>
             </select>
           </div>
           <div class="form-group">
@@ -271,6 +264,7 @@
               <option value="Mountain">Mountain</option>
               <option value="Lake">Lake</option>
               <option value="Island">Island</option>
+              <option value="Archipelago">Archipelago</option>
             </select>
           </div>
           <div class="form-group">
@@ -322,6 +316,7 @@
               <option value="Papua">Papua</option>
               <option value="Bali">Bali</option>
               <option value="NTT">Nusa Tenggara</option>
+              <option value="Maluku">Maluku</option>
             </select>
           </div>
           <div class="form-group">
@@ -332,6 +327,7 @@
               <option value="Mountain">Mountain</option>
               <option value="Lake">Lake</option>
               <option value="Island">Island</option>
+              <option value="Archipelago">Archipelago</option>
             </select>
           </div>
           <div class="form-group">
@@ -360,19 +356,9 @@
     <i class="fas fa-plus"></i>
   </button>
 
-  <!-- Lightbox for Gallery -->
-  <div class="lightbox-overlay" id="lightbox">
-    <button class="lightbox-close" onclick="closeLightbox()">
-      <i class="fas fa-times"></i>
-    </button>
-    <div class="lightbox-content">
-      <img id="lightboxImg" src="" alt="">
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-  </div>
-
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+  <script src="js/destination-data.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
