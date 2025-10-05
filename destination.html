@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Destination - NUSANTARA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-brand">
+        <h1><a href="index.html" style="color: inherit; text-decoration: none;">NUSANTARA</a></h1>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#destinations" class="nav-link">Destinations</a>
+        <a href="index.html#about" class="nav-link">About</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Destination Detail Hero -->
+  <section class="detail-hero" id="detailHero">
+    <div class="detail-hero-overlay"></div>
+    <div class="detail-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span>/</span>
+        <a href="index.html#destinations">Destinations</a>
+        <span>/</span>
+        <span id="breadcrumbName">Loading...</span>
+      </div>
+      <h1 class="detail-title" id="detailTitle">Loading...</h1>
+      <p class="detail-location" id="detailLocation">
+        <i class="fas fa-map-marker-alt"></i> Loading...
+      </p>
+      <div class="detail-meta" id="detailMeta"></div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="detail-content">
+    <div class="container">
+      <div class="detail-grid">
+        <!-- Main Column -->
+        <div class="detail-main">
+          <!-- Description -->
+          <section class="content-section">
+            <h2 class="section-title">
+              <i class="fas fa-info-circle"></i>
+              Overview
+            </h2>
+            <p class="detail-description" id="detailDescription">Loading...</p>
+          </section>
+
+          <!-- Gallery -->
+          <section class="content-section" id="gallerySection">
+            <h2 class="section-title">
+              <i class="fas fa-images"></i>
+              Gallery
+            </h2>
+            <div class="detail-gallery" id="detailGallery"></div>
+          </section>
+
+          <!-- History -->
+          <section class="content-section">
+            <h2 class="section-title">
+              <i class="fas fa-history"></i>
+              History
+            </h2>
+            <div class="detail-history" id="detailHistory">Loading...</div>
+          </section>
+
+          <!-- Stories & Culture -->
+          <section class="content-section">
+            <h2 class="section-title">
+              <i class="fas fa-book-open"></i>
+              Stories & Culture
+            </h2>
+            <div class="detail-stories" id="detailStories">Loading...</div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="detail-sidebar">
+          <!-- Actions Card -->
+          <div class="sidebar-card">
+            <h3>Actions</h3>
+            <div class="sidebar-actions">
+              <button class="sidebar-btn wishlist-btn" id="sidebarWishlist">
+                <i class="fas fa-heart"></i>
+                Add to Wishlist
+              </button>
+              <button class="sidebar-btn visited-btn" id="sidebarVisited">
+                <i class="fas fa-check"></i>
+                Mark as Visited
+              </button>
+              <button class="sidebar-btn share-btn" onclick="shareDestination()">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </button>
+            </div>
+          </div>
+
+          <!-- Activities Card -->
+          <div class="sidebar-card">
+            <h3><i class="fas fa-hiking"></i> Activities</h3>
+            <ul class="activities-list" id="detailActivities">
+              <li>Loading...</li>
+            </ul>
+          </div>
+
+          <!-- Foods Card -->
+          <div class="sidebar-card">
+            <h3><i class="fas fa-utensils"></i> Local Foods</h3>
+            <ul class="foods-list" id="detailFoods">
+              <li>Loading...</li>
+            </ul>
+          </div>
+
+          <!-- Related Destinations -->
+          <div class="sidebar-card">
+            <h3><i class="fas fa-map-signs"></i> Related Destinations</h3>
+            <div class="related-destinations" id="relatedDestinations">
+              Loading...
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© Kelompok 1 TI A</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/destination-data.js"></script>
+  <script src="js/destination-detail.js"></script>
+</body>
+</html>
