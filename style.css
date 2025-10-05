@@ -276,7 +276,7 @@ body {
     transform-origin: center;
 }
 
-/* ================ NEW DESTINATIONS SECTION ================ */
+/* Destination */
 .destinations-section {
     padding: 100px 0;
     background: linear-gradient(180deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
@@ -333,7 +333,6 @@ body {
     color: #ffffff;
 }
 
-/* Destinations Showcase - Cinematic Layout */
 .destinations-showcase {
     display: flex;
     flex-direction: column;
@@ -1340,9 +1339,8 @@ body {
     }
 }
 
-/* ===== Text Justify untuk History & Stories ===== */
 .modal-history p,
 .modal-stories p {
   text-align: justify;
-  line-height: 1.7; /* biar lebih enak dibaca */
+  line-height: 1.7;
 }
