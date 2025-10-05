@@ -174,7 +174,7 @@ const destinations = [
     gallery: [
       { img: "assets/rumah-adat-tongkonan.jpg", caption: "Rumah adat Tongkonan" },
       { img: "assets/deppa-tori.jpg", caption: "Makanan khas (Deppa Tori)" },
-      { img: "assets/ritual-manene.jpg", caption: "Ritual Ma'nene" }
+      { img: "assets/ritual-manene.jpg", caption: "Ritual Ma nene" }
     ]
   },
   {
