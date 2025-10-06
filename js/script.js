@@ -2,7 +2,7 @@
 let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
 let visited = JSON.parse(localStorage.getItem('visited') || '[]');
 
-// ====== Render Destinations - Redirect to Detail Page ======
+// ====== Render Destinations ======
 function renderDestinations(list) {
   const $grid = $("#destinationsGrid");
   $grid.empty();
@@ -115,10 +115,13 @@ function filterDestinations(view) {
 // ====== Modal Functions ======
 function openAddModal() {
   $("#addDestinationModal").addClass("active");
+  $("body").css("overflow", "hidden");
 }
 
 function closeAddModal() {
   $("#addDestinationModal").removeClass("active");
+  $("body").css("overflow", "auto");
+  $("#addDestinationForm")[0].reset();
 }
 
 function openEditModal(dest) {
@@ -131,10 +134,12 @@ function openEditModal(dest) {
   $("#editDestHistory").val(dest.history);
   $("#editDestImageUrl").val(dest.img.replace("assets/", ""));
   $("#editDestinationModal").addClass("active");
+  $("body").css("overflow", "hidden");
 }
 
 function closeEditModal() {
   $("#editDestinationModal").removeClass("active");
+  $("body").css("overflow", "auto");
 }
 
 // ====== Utility Functions ======
@@ -171,63 +176,92 @@ function handleScrollAnimations() {
 
 // ====== Event Handlers ======
 $(document).ready(function () {
+  // Initial render
   renderDestinations(destinations);
 
+  // Search & Filter
   $("#searchInput").on("input", applyFilters);
   $("#regionFilter").on("change", applyFilters);
   $("#typeFilter").on("change", applyFilters);
 
+  // Wishlist Button
   $(document).on("click", ".wishlist-btn", function (e) {
     e.stopPropagation();
     e.preventDefault();
     const id = $(this).data("id");
+    
     if (!wishlist.includes(id)) {
       wishlist.push(id);
-      $(this).addClass("active").html('<i class="fas fa-heart"></i> Wishlisted');
     } else {
       wishlist = wishlist.filter(w => w !== id);
-      $(this).removeClass("active").html('<i class="fas fa-heart"></i> Wishlist');
     }
+    
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    
+    const currentView = $(".toggle-btn.active").data("view") || "all";
+    filterDestinations(currentView);
   });
 
+  // Visited Button
   $(document).on("click", ".visited-btn", function (e) {
     e.stopPropagation();
     e.preventDefault();
     const id = $(this).data("id");
+    
     if (!visited.includes(id)) {
       visited.push(id);
-      $(this).addClass("active").html('<i class="fas fa-check"></i> Visited');
     } else {
       visited = visited.filter(v => v !== id);
-      $(this).removeClass("active").html('<i class="fas fa-check"></i> Mark Visited');
     }
+    
     localStorage.setItem('visited', JSON.stringify(visited));
+    
+    const currentView = $(".toggle-btn.active").data("view") || "all";
+    filterDestinations(currentView);
   });
 
+  // Delete Button
   $(document).on("click", ".delete-btn", function (e) {
     e.stopPropagation();
     e.preventDefault();
+    
     const id = $(this).data("id");
-    if (confirm("Are you sure you want to delete this destination?")) {
-      destinations = destinations.filter(d => d.id !== id);
+    const dest = destinations.find(d => d.id === id);
+    
+    if (!dest) {
+      alert("Destination not found!");
+      return;
+    }
+    
+    if (confirm(`Are you sure you want to delete "${dest.name}"?`)) {
+      const indexToRemove = destinations.findIndex(d => d.id === id);
+      if (indexToRemove !== -1) {
+        destinations.splice(indexToRemove, 1);
+      }
+      
       applyFilters();
+      alert(`"${dest.name}" has been deleted!`);
     }
   });
 
+  // Edit Button
   $(document).on("click", ".edit-btn", function (e) {
     e.stopPropagation();
     e.preventDefault();
     const id = $(this).data("id");
     const dest = destinations.find(d => d.id === id);
-    if (dest) openEditModal(dest);
+    if (dest) {
+      openEditModal(dest);
+    }
   });
 
+  // Modal Close Buttons
   $(document).on("click", ".modal-close", function () {
     closeAddModal();
     closeEditModal();
   });
 
+  // Click outside modal to close
   $(document).on("click", ".modal-overlay", function (e) {
     if ($(e.target).hasClass("modal-overlay")) {
       closeAddModal();
@@ -235,52 +269,86 @@ $(document).ready(function () {
     }
   });
 
+  // Add Destination Form
   $("#addDestinationForm").on("submit", function (e) {
     e.preventDefault();
+    
+    const nameVal = $("#destName").val().trim();
+    const locationVal = $("#destLocation").val().trim();
+    const regionVal = $("#destRegion").val();
+    const typeVal = $("#destType").val();
+    const imageVal = $("#destImageUrl").val().trim();
+    const descVal = $("#destDescription").val().trim();
+    const historyVal = $("#destHistory").val().trim();
+    
+    if (!nameVal || !locationVal || !regionVal || !typeVal) {
+      alert("Please fill all required fields!");
+      return;
+    }
+    
     const newDest = {
-      id: Date.now().toString(),
-      name: $("#destName").val(),
-      location: $("#destLocation").val(),
-      region: $("#destRegion").val(),
-      type: $("#destType").val(),
-      img: "assets/" + $("#destImageUrl").val(),
-      desc: $("#destDescription").val(),
-      history: $("#destHistory").val(),
+      id: "new_" + Date.now(),
+      name: nameVal,
+      location: locationVal,
+      region: regionVal,
+      type: typeVal,
+      img: imageVal ? "assets/" + imageVal : "assets/placeholder.jpg",
+      desc: descVal || "No description available.",
+      history: historyVal || "No history available.",
       activities: [],
       foods: [],
-      stories: ""
+      stories: "",
+      gallery: []
     };
+    
     destinations.push(newDest);
     renderDestinations(destinations);
     closeAddModal();
-    this.reset();
+    
+    alert(`"${newDest.name}" has been added successfully!`);
+    
+    setTimeout(() => {
+      $("html, body").animate({ 
+        scrollTop: $(document).height() 
+      }, 800);
+    }, 200);
   });
 
+  // Edit Destination Form
   $("#editDestinationForm").on("submit", function (e) {
     e.preventDefault();
+    
     const id = $("#editDestId").val();
     const index = destinations.findIndex(d => d.id === id);
-    if (index !== -1) {
-      destinations[index] = {
-        ...destinations[index],
-        name: $("#editDestName").val(),
-        location: $("#editDestLocation").val(),
-        region: $("#editDestRegion").val(),
-        type: $("#editDestType").val(),
-        img: "assets/" + $("#editDestImageUrl").val(),
-        desc: $("#editDestDescription").val(),
-        history: $("#editDestHistory").val()
-      };
-      renderDestinations(destinations);
-      closeEditModal();
+    
+    if (index === -1) {
+      alert("Error: Destination not found!");
+      return;
     }
+    
+    const oldName = destinations[index].name;
+    
+    destinations[index].name = $("#editDestName").val().trim();
+    destinations[index].location = $("#editDestLocation").val().trim();
+    destinations[index].region = $("#editDestRegion").val();
+    destinations[index].type = $("#editDestType").val();
+    destinations[index].img = "assets/" + $("#editDestImageUrl").val().trim();
+    destinations[index].desc = $("#editDestDescription").val().trim();
+    destinations[index].history = $("#editDestHistory").val().trim();
+    
+    renderDestinations(destinations);
+    closeEditModal();
+    
+    alert(`"${oldName}" has been updated successfully!`);
   });
 
+  // Hamburger Menu
   $(".hamburger").on("click", function () {
     $(".nav-menu").toggleClass("active");
     $(this).toggleClass("active");
   });
 
+  // Navigation Links
   $(".nav-link").on("click", function (e) {
     e.preventDefault();
     const target = $(this).attr("href");
@@ -291,8 +359,7 @@ $(document).ready(function () {
     if (target === "index.html#home" || target === "#home") {
       $("html, body").animate({ scrollTop: $("#home").offset().top }, 500);
     } else if (target === "index.html#destinations" || target === "#destinations") {
-      $("html, body").animate({ scrollTop: $("#destinations").offset().top }, 500);
-      filterDestinations("all");
+      scrollToDestinations();
     } else if (target === "index.html#about" || target === "#about") {
       scrollToAbout();
     }
@@ -301,27 +368,32 @@ $(document).ready(function () {
     $(".hamburger").removeClass("active");
   });
 
+  // Scroll Active Nav
   $(window).on("scroll", function () {
     const scrollPos = $(document).scrollTop();
 
-    const homeTop = $("#home").offset().top - 100;
-    const destTop = $("#destinations").offset().top - 100;
-    const aboutTop = $("#about").offset().top - 100;
+    if ($("#home").length) {
+      const homeTop = $("#home").offset().top - 100;
+      const destTop = $("#destinations").offset().top - 100;
+      const aboutTop = $("#about").offset().top - 100;
 
-    $(".nav-link").removeClass("active");
+      $(".nav-link").removeClass("active");
 
-    if (scrollPos >= aboutTop) {
-      $(".nav-link[href='#about'], .nav-link[href='index.html#about']").addClass("active");
-    } else if (scrollPos >= destTop) {
-      $(".nav-link[href='#destinations'], .nav-link[href='index.html#destinations']").addClass("active");
-    } else if (scrollPos >= homeTop) {
-      $(".nav-link[href='#home'], .nav-link[href='index.html#home']").addClass("active");
+      if (scrollPos >= aboutTop) {
+        $(".nav-link[href='#about'], .nav-link[href='index.html#about']").addClass("active");
+      } else if (scrollPos >= destTop) {
+        $(".nav-link[href='#destinations'], .nav-link[href='index.html#destinations']").addClass("active");
+      } else if (scrollPos >= homeTop) {
+        $(".nav-link[href='#home'], .nav-link[href='index.html#home']").addClass("active");
+      }
     }
   });
 
+  // Scroll Animations
   window.addEventListener("scroll", handleScrollAnimations);
   window.addEventListener("load", handleScrollAnimations);
 
+  // ESC key to close modals
   $(document).on("keydown", function(e) {
     if (e.key === "Escape") {
       closeAddModal();
